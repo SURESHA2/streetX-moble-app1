@@ -1,0 +1,90 @@
+
+<ion-content>
+
+	<div  text-center style=" margin-top: 0 	px;">
+		<img src="assets/img/streetx-logo.png" alt="Ionic logo" class="brand-logo">
+	</div>
+	<ion-row class="logo" text-center>
+		 <ion-col col-12 style="    font-size: 2em;    margin-top: 0px;    color: #3896ea;"><ion-icon name="create" class="icon-chat-user"></ion-icon></ion-col>
+		 <ion-col col-12><h3 class="button-color" ><strong>Create Account</strong></h3></ion-col>
+	</ion-row>
+	<form #signupForm="ngForm" novalidate>
+		<ion-list no-lines class="form-input-fields">
+			<ion-row>
+				<ion-col col-6 class="padding0">
+					<ion-item class="padding0">
+						<ion-input [(ngModel)]="signup.name" placeholder="Full name" name="name" type="text" #name="ngModel" required class="login-input">
+						</ion-input>
+					</ion-item>
+					<p ion-text [hidden]="name.valid || submitted == false" color="danger" padding-left>
+						Name is required
+					</p>
+				</ion-col>
+				<ion-col col-6 class="padding0">
+					<ion-item class="padding0">
+						<ion-input [(ngModel)]="signup.mobileNumber" placeholder="Enter mobile number" name="mobileNumber" number="number" #mobileNumber="ngModel" required class="login-input">
+						</ion-input>
+					</ion-item>
+					<p ion-text [hidden]="mobileNumber.valid || submitted == false" color="danger" padding-left>
+						mobileNumber is required
+					</p>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col class="padding0">
+					<ion-item class="padding0">
+						<ion-input [(ngModel)]="signup.email" placeholder="Enter emailid" name="email" type="email" #email="ngModel" required class="login-input" >
+						</ion-input>
+					</ion-item>
+					<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+						email is required
+					</p>
+
+
+				</ion-col>
+			</ion-row>
+			<ion-row>
+
+				<ion-col col-6 class="padding0">
+					<ion-item class="padding0">
+						<ion-input [(ngModel)]="signup.password" placeholder="Enter password" name="password" type="password" #password="ngModel" required class="login-input" >
+						</ion-input>
+					</ion-item>
+					<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+						Password is required
+					</p>
+				</ion-col>
+				<ion-col col-6 class="padding0">
+					<ion-item class="padding0">
+						<ion-input [(ngModel)]="signup.confirmpassword" placeholder="Re-enter password" name="confirmpassword" type="password" #confirmpassword="ngModel" required class="login-input">
+						</ion-input>
+					</ion-item>
+					<p ion-text [hidden]="confirmpassword.valid || submitted == false" color="danger" padding-left>
+						confirm password is required
+					</p>
+						</ion-col>
+			            </ion-row>
+					<ion-input [(ngModel)]="signup.spendingpassword" placeholder="Enter spending password" name="spendingpassword" type="password" #spendingpassword="ngModel" required class="login-input" >
+						</ion-input>
+						
+						<ion-input [(ngModel)]="signup.confirmspendingpassword" placeholder="Enter  confirmspendingpassword" name="confirmspendingpassword" type="password" #confirmspendingpassword="ngModel" required class="login-input" >
+						</ion-input>
+			
+
+			<ion-row responsive-sm>
+				<ion-col >
+					<button class="button-backcolor"  ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+				</ion-col>
+			</ion-row>
+			<hr>
+			<ion-row>
+				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">
+					Already a member? <a class="button-color" (click)="onLogin()">Login</a>
+				</ion-col>
+			</ion-row>
+		</ion-list>
+
+
+	</form>
+
+</ion-content>
