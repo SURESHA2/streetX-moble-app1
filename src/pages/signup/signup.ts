@@ -15,8 +15,9 @@ import { LoginPage } from '../../pages/login/login';
 export class SignupPage {
 
   signup1: UserOptions = { username: '', password: '' };
-  signup: SignUpDetails = { name: '', email: '', password: '', confirmpassword: '', spendingpassword: '', confirmspendingpassword:'',mobileNumber:''};
- otp: otpDetail = {email:'', otp:'' };
+  // signup: SignUpDetails = { name: '', email: '', password: '', confirmpassword: '', spendingpassword: '', confirmspendingpassword:'',mobileNumber:''};
+  signup: SignUpDetails = { name: '', email: '', password: '', confirmpassword: '', mobileNumber:''};
+  otp: otpDetail = {email:'', otp:'' };
   submitted = false;
   responseData:any;
 
@@ -42,11 +43,10 @@ export class SignupPage {
     if (form.valid){
        this.userData.signup(this.signup1.username);
         let loading = this.loadingCtrl.create({
-          
          content: 'account creating...'
         });
-
-
+      
+    
   loading.present();
     this._setupService.createUserAccount(this.signup).subscribe((result) => {
       console.log(this.signup);

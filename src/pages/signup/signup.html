@@ -13,11 +13,11 @@
 			<ion-row>
 				<ion-col col-6 class="padding0">
 					<ion-item class="padding0">
-						<ion-input [(ngModel)]="signup.name" placeholder="Full name" name="name" type="text" #name="ngModel" required class="login-input">
+						<ion-input [(ngModel)]="signup.fullName" placeholder="Full name" name="fullName" type="text" #fullName="ngModel" required class="login-input">
 						</ion-input>
 					</ion-item>
-					<p ion-text [hidden]="name.valid || submitted == false" color="danger" padding-left>
-						Name is required
+					<p ion-text [hidden]="fullName.valid || submitted == false" color="danger" padding-left>
+						fullName is required
 					</p>
 				</ion-col>
 				<ion-col col-6 class="padding0">
@@ -56,21 +56,26 @@
 				</ion-col>
 				<ion-col col-6 class="padding0">
 					<ion-item class="padding0">
-						<ion-input [(ngModel)]="signup.confirmpassword" placeholder="Re-enter password" name="confirmpassword" type="password" #confirmpassword="ngModel" required class="login-input">
+						<ion-input [(ngModel)]="signup.confirmPassword" placeholder="Re-enter password" name="confirmPassword" type="password" #confirmPassword="ngModel" required class="login-input">
 						</ion-input>
 					</ion-item>
-					<p ion-text [hidden]="confirmpassword.valid || submitted == false" color="danger" padding-left>
-						confirm password is required
+					<p ion-text [hidden]="confirmPassword.valid || submitted == false" color="danger" padding-left>
+						confirmPassword password is required
 					</p>
 						</ion-col>
 			            </ion-row>
-					<ion-input [(ngModel)]="signup.spendingpassword" placeholder="Enter spending password" name="spendingpassword" type="password" #spendingpassword="ngModel" required class="login-input" >
+					<!-- <ion-input [(ngModel)]="signup.spendingpassword" placeholder="Enter spending password" name="spendingpassword" type="password" #spendingpassword="ngModel" required class="login-input" >
 						</ion-input>
+						<p ion-text [hidden]="spendingpassword.valid || submitted == false" color="danger" padding-left>
+						Spending Password is required
+					</p>
 						
 						<ion-input [(ngModel)]="signup.confirmspendingpassword" placeholder="Enter  confirmspendingpassword" name="confirmspendingpassword" type="password" #confirmspendingpassword="ngModel" required class="login-input" >
 						</ion-input>
-			
-
+			           <p ion-text [hidden]="confirmspendingpassword.valid || submitted == false" color="danger" padding-left>
+						confirmspendingpassword Password is required
+					</p>
+ -->
 			<ion-row responsive-sm>
 				<ion-col >
 					<button class="button-backcolor"  ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>

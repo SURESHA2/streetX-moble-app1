@@ -24,7 +24,6 @@ export interface SendOption {
 export interface LoginDetail {
   email: string,
   password: string,
-  ip:any;
   lat?:any,
   long?:any
 }
@@ -57,13 +56,13 @@ export interface SignUpDetails{
 	email:string,
 	password:string,
 	confirmpassword?:string,
-	spendingpassword?:string,
-  confirmspendingpassword?:string,
+	// spendingpassword?:string,
+ //  confirmspendingpassword?:string,
   mobileNumber?:string
 
 }
 export interface Otpvalue{
-      userMailId: string,
+      traderMailId: string,
       otp: string
   }
 

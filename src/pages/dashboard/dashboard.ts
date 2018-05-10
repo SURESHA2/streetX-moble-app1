@@ -1,9 +1,8 @@
 import { Component,NgZone } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {  NavController,NavParams,Events ,Platform,ToastController} from 'ionic-angular';
-import { updateValue,UserEmailId,Location } from '../../interfaces/user-options';
+import { updateValue,UserEmailId,Location} from '../../interfaces/user-options';
 import { SetupService } from '../../providers/setup.services';
-// import { UserData } from '../../providers/user-data';
 import { Geolocation } from '@ionic-native/geolocation';
 import  *as socketIOClient  from 'socket.io-client';
 import *as sailsIOClient  from 'sails.io.js';
@@ -12,7 +11,7 @@ import *as sailsIOClient  from 'sails.io.js';
  * Generated class for the DashboardPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * Ionic pages and navigation.      
  */
 
 @Component({
@@ -21,50 +20,39 @@ import *as sailsIOClient  from 'sails.io.js';
 })
 export class DashboardPage {
 
-   io:any= sailsIOClient(socketIOClient); //375-384 sails.io.js in nodemodule
-
+   io:any= sailsIOClient(socketIOClient); //375-384 sails.io.js in nodemodule 
+    
    user:any;
-
-   cexdata:any;
+   cexdata:any;   
    zebPayData:any;
-   submitted = false;
+   submitted = false; 
    location:Location={ email:'',lat:'',long:''};
    userEmail: UserEmailId = { email: ''};
-   btcValue: updateValue= { email: '', buyRate: '',currencyType:'',volume:'',sellRate:'' };
-   inrValue: updateValue= { email: '', buyRate: '',currencyType:'',volume:'',sellRate:'' };
-
-  constructor(private ngZone: NgZone,
-
-    public toastCtrl: ToastController,
-    private geolocation: Geolocation,
-    public navCtrl: NavController,
-    public platform: Platform,
-    public events: Events,
-    public navParams: NavParams,
-    public _setupService: SetupService,) {
-
-    this.io.sails.url = 'http://localhost:1337';
+   btcValue: updateValue= { email: '', buyRate: '',currencyType:'',volume:'',sellRate:'' };  
+   inrValue: updateValue= { email: '', buyRate: '',currencyType:'',volume:'',sellRate:'' };   
+  
+  constructor(private ngZone: NgZone,public toastCtrl: ToastController,private geolocation: Geolocation,public navCtrl: NavController,
+  public platform: Platform,public events: Events, public navParams: NavParams,public _setupService: SetupService,) { 
+   
+    this.io.sails.url = "http://192.168.0.133:3000";  
     this.userdata();
-    this.getCurrencyPrice();
-    this.getCurrentPosition();
-    this.getTradersSetValue();
+    this.getCurrencyPrice(); 
+    this.getCurrentPosition();  
+    this.getTradersSetValue();  
   }
 
+ 
 
-
-  userdata(){
-       this.user=JSON.parse(localStorage.getItem('logindetail'));
-     //  alert("user = = ="+this.user);
-       console.log(this.user.user.email);
-
+  userdata(){      
+       this.user=JSON.parse(localStorage.getItem('logindetail'));         
        if(this.user!=null||this.user!=undefined){
-       this.userEmail.email=this.user.user.email;
-        this.events.publish("shareObject", this.userEmail.email);
+       this.userEmail.email=this.user.trader.email;  
+        this.events.publish("shareObject", this.userEmail.email); 
       }
    }
 
    getCurrencyPrice(){
-    this._setupService.getBuydata().subscribe((response)=>{
+    this._setupService.getBuydata().subscribe((response)=>{ 
     if(response.statusCode==200) {
          this.cexdata=response.data.cex.bid;
          this.zebPayData=response.data.zeb.buy;
@@ -74,29 +62,29 @@ export class DashboardPage {
 
 
   // get current position
- getCurrentPosition() {
-  this.platform.ready().then(() =>   {
+ getCurrentPosition() {  
+  this.platform.ready().then(() =>   {        
          let options = {
-            enableHighAccuracy: true,
+            enableHighAccuracy: true, 
             maximumAge: 3600,
             timeout:10000
-       };
-       this.geolocation.getCurrentPosition(options).then((response) => {
-        this.location.lat=response.coords.latitude;
-        this.location.long=response.coords.longitude;
+       }; 
+       this.geolocation.getCurrentPosition(options).then((response) => {        
+        this.location.lat=response.coords.latitude; 
+        this.location.long=response.coords.longitude; 
         this.location.email= this.userEmail.email;
        this._setupService.sentLocation(this.location).subscribe((response)=>{
 
       });
-       }).catch((error) => {
+       }).catch((error) => {   
      });
-   });
+   }); 
   }
 
-//get traders updated values
+//get traders updated values 
 
   getTradersSetValue(){
-  this._setupService.getTraderInfo(this.userEmail).subscribe((response) => {
+  this._setupService.getTraderInfo(this.userEmail).subscribe((response) => { 
     if(response.data != null){
       for(var i=0;i<response.data.length;i++){
         switch (response.data[i].currencyType) {
@@ -119,61 +107,61 @@ export class DashboardPage {
       }
     }
   })
-}
+}  
 
-// update BTC values
+// update BTC values 
 
   updateBTC(form: NgForm){
     this.btcValue.currencyType="BTC";
-    this.btcValue.email=this.userEmail.email;
-    this.submitted = true;
+    this.btcValue.email=this.userEmail.email; 
+    this.submitted = true;     
      var ngZ = this.ngZone;
     var event=this.events;
-     if (form.valid) {
-
+     if (form.valid) {    
+      
         this.io.socket.post('/trader/buySellUpdate',this.btcValue, function(data, response){
-       ngZ.run(() => {
+       ngZ.run(() => {         
            event.publish("ShareResponse",  response);
-       });
-
-       })
-        this.listenToDataChangeEvents();
+       });   
+    
+       }) 
+        this.listenToDataChangeEvents();   
    }
   }
 
- // update INR values
+ // update INR values 
 
-  updateINR(form: NgForm){
+  updateINR(form: NgForm){   
     this.inrValue.currencyType="INRW";
-    this.inrValue.email=this.userEmail.email;
-    this.submitted = true;
+    this.inrValue.email=this.userEmail.email;  
+    this.submitted = true; 
       var ngZ = this.ngZone;
     var event=this.events;
-     if (form.valid) {
-    this.io.socket.post('/trader/buySellUpdate',this.inrValue, function(data, response){
-         ngZ.run(() => {
+     if (form.valid) {    
+    this.io.socket.post('/trader/buySellUpdate',this.inrValue, function(data, response){             
+         ngZ.run(() => {       
            event.publish("ShareResponse",  response);
-       });
-       })
-        this.listenToDataChangeEvents();
+       });       
+       }) 
+        this.listenToDataChangeEvents();    
    }
   }
 
    listenToDataChangeEvents() {
-   this.events.subscribe('ShareResponse', (res) => {
+   this.events.subscribe('ShareResponse', (res) => {    
         let toast = this.toastCtrl.create({
                      message: res.body.message,
                      showCloseButton: true,
                      closeButtonText: 'Ok',
                      duration: 2000
                 });
-                toast.present();
-  });
+                toast.present(); 
+  });   
  }
 
-  ionViewWillLeave() {
+  ionViewWillLeave() {    
    this.io.socket.disconnect();
-   delete this.io.sails;
+   delete this.io.sails;   
   }
 
 

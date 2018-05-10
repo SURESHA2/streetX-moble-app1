@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 116:
+/***/ 117:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42,7 +42,7 @@ var ForgotpasswordPage = (function () {
         this._setupService = _setupService;
         this.loadingCtrl = loadingCtrl;
         this.emailId = { email: '' };
-        this.otpvalue = { userMailId: '', otp: '', };
+        this.otpvalue = { traderMailId: '', otp: '', };
         this.submitted = false;
     }
     ForgotpasswordPage.prototype.ionViewDidEnter = function () {
@@ -141,7 +141,7 @@ var ForgotpasswordPage = (function () {
     };
     ForgotpasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-forgotpassword',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\forgotpassword\forgotpassword.html"*/'<ion-header>\n\n	<ion-navbar>\n\n		<ion-title>Forgot Password</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n	\n\n\n\n	<form #forgotPasswordForm="ngForm" novalidate>\n\n		<ion-list no-lines>\n\n			<ion-item>\n\n				<ion-label stacked class="button-color">Email id</ion-label>\n\n				<ion-input [(ngModel)]="emailId.userMailId" placeholder="enter userMailId" name="userMailId" type="text" #userMailId="ngModel" spellcheck="false" autocapitalize="off"\n\n					required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="userMailId.valid || submitted == false" color="danger" padding-left>\n\n				userMailId is required\n\n			</p>\n\n		</ion-list>\n\n    <ion-row responsive-sm>\n\n          <ion-col>\n\n				<button class="button-backcolor" ion-button (click)="forgotPassword(forgotPasswordForm)" type="submit" block>Submit</button>\n\n			</ion-col>\n\n	</ion-row> \n\n		\n\n	</form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\forgotpassword\forgotpassword.html"*/,
+            selector: 'page-forgotpassword',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\forgotpassword\forgotpassword.html"*/'<ion-header>\n\n	<ion-navbar>\n\n		<ion-title>Forgot Password</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n	\n\n\n\n	<form #forgotPasswordForm="ngForm" novalidate>\n\n		<ion-list no-lines>\n\n			<ion-item>\n\n				<ion-label stacked class="button-color">Email id</ion-label>\n\n				<ion-input [(ngModel)]="emailId.email" placeholder="enter email id" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"\n\n					required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>\n\n				Email is required\n\n			</p>\n\n		</ion-list>\n\n    <ion-row responsive-sm>\n\n          <ion-col>\n\n				<button class="button-backcolor" ion-button (click)="forgotPassword(forgotPasswordForm)" type="submit" block>Submit</button>\n\n			</ion-col>\n\n	</ion-row> \n\n		\n\n	</form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\forgotpassword\forgotpassword.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], ForgotpasswordPage);
@@ -149,193 +149,6 @@ var ForgotpasswordPage = (function () {
 }());
 
 //# sourceMappingURL=forgotpassword.js.map
-
-/***/ }),
-
-/***/ 117:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sails_io_js__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sails_io_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_sails_io_js__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-// import { UserData } from '../../providers/user-data';
-
-
-
-/**
- * Generated class for the DashboardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DashboardPage = (function () {
-    function DashboardPage(ngZone, toastCtrl, geolocation, navCtrl, platform, events, navParams, _setupService) {
-        this.ngZone = ngZone;
-        this.toastCtrl = toastCtrl;
-        this.geolocation = geolocation;
-        this.navCtrl = navCtrl;
-        this.platform = platform;
-        this.events = events;
-        this.navParams = navParams;
-        this._setupService = _setupService;
-        this.io = __WEBPACK_IMPORTED_MODULE_5_sails_io_js__(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__); //375-384 sails.io.js in nodemodule
-        this.submitted = false;
-        this.location = { email: '', lat: '', long: '' };
-        this.userEmail = { email: '' };
-        this.btcValue = { email: '', buyRate: '', currencyType: '', volume: '', sellRate: '' };
-        this.inrValue = { email: '', buyRate: '', currencyType: '', volume: '', sellRate: '' };
-        this.io.sails.url = 'http://localhost:1337';
-        this.userdata();
-        this.getCurrencyPrice();
-        this.getCurrentPosition();
-        this.getTradersSetValue();
-    }
-    DashboardPage.prototype.userdata = function () {
-        this.user = JSON.parse(localStorage.getItem('logindetail'));
-        //  alert("user = = ="+this.user);
-        console.log(this.user.user.email);
-        if (this.user != null || this.user != undefined) {
-            this.userEmail.email = this.user.user.email;
-            this.events.publish("shareObject", this.userEmail.email);
-        }
-    };
-    DashboardPage.prototype.getCurrencyPrice = function () {
-        var _this = this;
-        this._setupService.getBuydata().subscribe(function (response) {
-            if (response.statusCode == 200) {
-                _this.cexdata = response.data.cex.bid;
-                _this.zebPayData = response.data.zeb.buy;
-            }
-        });
-    };
-    // get current position
-    DashboardPage.prototype.getCurrentPosition = function () {
-        var _this = this;
-        this.platform.ready().then(function () {
-            var options = {
-                enableHighAccuracy: true,
-                maximumAge: 3600,
-                timeout: 10000
-            };
-            _this.geolocation.getCurrentPosition(options).then(function (response) {
-                _this.location.lat = response.coords.latitude;
-                _this.location.long = response.coords.longitude;
-                _this.location.email = _this.userEmail.email;
-                _this._setupService.sentLocation(_this.location).subscribe(function (response) {
-                });
-            }).catch(function (error) {
-            });
-        });
-    };
-    //get traders updated values
-    DashboardPage.prototype.getTradersSetValue = function () {
-        var _this = this;
-        this._setupService.getTraderInfo(this.userEmail).subscribe(function (response) {
-            if (response.data != null) {
-                for (var i = 0; i < response.data.length; i++) {
-                    switch (response.data[i].currencyType) {
-                        case "INRW":
-                            _this.inrValue.buyRate = response.data[i].buyRate;
-                            _this.inrValue.sellRate = response.data[i].sellRate;
-                            _this.inrValue.volume = response.data[i].volume;
-                            break;
-                        case "BTC":
-                            _this.btcValue.buyRate = response.data[i].buyRate;
-                            _this.btcValue.sellRate = response.data[i].sellRate;
-                            _this.btcValue.volume = response.data[i].volume;
-                            break;
-                        default:
-                            // code...
-                            break;
-                    }
-                }
-            }
-        });
-    };
-    // update BTC values
-    DashboardPage.prototype.updateBTC = function (form) {
-        this.btcValue.currencyType = "BTC";
-        this.btcValue.email = this.userEmail.email;
-        this.submitted = true;
-        var ngZ = this.ngZone;
-        var event = this.events;
-        if (form.valid) {
-            this.io.socket.post('/trader/buySellUpdate', this.btcValue, function (data, response) {
-                ngZ.run(function () {
-                    event.publish("ShareResponse", response);
-                });
-            });
-            this.listenToDataChangeEvents();
-        }
-    };
-    // update INR values
-    DashboardPage.prototype.updateINR = function (form) {
-        this.inrValue.currencyType = "INRW";
-        this.inrValue.email = this.userEmail.email;
-        this.submitted = true;
-        var ngZ = this.ngZone;
-        var event = this.events;
-        if (form.valid) {
-            this.io.socket.post('/trader/buySellUpdate', this.inrValue, function (data, response) {
-                ngZ.run(function () {
-                    event.publish("ShareResponse", response);
-                });
-            });
-            this.listenToDataChangeEvents();
-        }
-    };
-    DashboardPage.prototype.listenToDataChangeEvents = function () {
-        var _this = this;
-        this.events.subscribe('ShareResponse', function (res) {
-            var toast = _this.toastCtrl.create({
-                message: res.body.message,
-                showCloseButton: true,
-                closeButtonText: 'Ok',
-                duration: 2000
-            });
-            toast.present();
-        });
-    };
-    DashboardPage.prototype.ionViewWillLeave = function () {
-        this.io.socket.disconnect();
-        delete this.io.sails;
-    };
-    DashboardPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-dashboard',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\dashboard\dashboard.html"*/'<!--\n\n  Generated template for the DashboardPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Dashboard</ion-title>\n\n   </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n \n\n\n\n<ion-content padding>\n\n  <ion-icon  name="Walllet"></ion-icon>\n\n  <h3 align="center">Coin Walllet</h3>\n\n    \n\n    <div>\n\n      <p align="center">$374.58358000</p>\n\n    </div>\n\n  <br />\n\n   <form #btcForm="ngForm" novalidate>\n\n     <ion-label >\n\n      <ion-row >  \n\n    <ion-col col-6>\n\n        <b><span>BTC VOL:</span></b>\n\n    </ion-col>\n\n     <ion-col col-6>{{cexdata}}</ion-col>\n\n  </ion-row>\n\n  \n\n   <ion-row>\n\n    <ion-col col-6>\n\n      <b><span>STX VOL:</span></b></ion-col>\n\n     <ion-col col-6>{{zebPayData}}</ion-col>\n\n  </ion-row> \n\n</ion-label>  \n\n    <ion-grid>\n\n<ion-card>\n\n  <ion-card-content>\n\n    <ion-row> <h3 class="text_Color" style="margin-top: 2px"><strong>BTC</strong></h3></ion-row>\n\n          <ion-row no-lines class="form-input-fields">\n\n            <ion-col col-4>\n\n\n\n          <ion-input [(ngModel)]="btcValue.buyRate"  placeholder="buy" name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n         <ion-input [(ngModel)]="btcValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n            <ion-input [(ngModel)]="btcValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n         </ion-row>\n\n  </ion-card-content>\n\n</ion-card>\n\n       <br><br>\n\n    </ion-grid>\n\n </form>\n\n     \n\n\n\n\n\n    <form #inrForm="ngForm" novalidate>\n\n          <ion-grid>\n\n  <ion-card>\n\n  <ion-card-content>\n\n         <ion-row> <ion-row> <h3 class="text_Color" style="margin-top: 5px"><strong>ETH</strong></h3></ion-row></ion-row>\n\n          <ion-row no-lines class="form-input-fields">\n\n            <ion-col col-4>\n\n          <ion-input [(ngModel)]="inrValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n         <ion-input [(ngModel)]="inrValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n            <ion-input [(ngModel)]="inrValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n         </ion-row>\n\n  </ion-card-content>\n\n</ion-card>\n\n\n\n      </ion-grid>\n\n    \n\n\n\n  </form>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\dashboard\dashboard.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__["a" /* SetupService */]])
-    ], DashboardPage);
-    return DashboardPage;
-}());
-
-//# sourceMappingURL=dashboard.js.map
 
 /***/ }),
 
@@ -362,7 +175,7 @@ webpackEmptyAsyncContext.id = 133;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SetupService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -386,134 +199,135 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SetupService = (function () {
     function SetupService(http) {
         this.http = http;
-        // endpoint_url : string = 'http://198.187.28.200:3000';
-        this.helppoint_url = 'http://localhost:1337';
+        // aendpoint_url : string = 'http://198.187.28.200:3000';
+        this.endpoint_url = 'http://192.168.0.133:3000';
         this.http = http;
         console.log('Hello ServicesProvider Provider');
     }
     //create new user account
     SetupService.prototype.createUserAccount = function (SignUpDetail) {
-        var response = this.http.post(this.helppoint_url + '/user/createNewUser', SignUpDetail).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/createNewTrader', SignUpDetail).map(function (res) { return res.json(); });
         return response;
     };
     // verify email
     SetupService.prototype.VerificationEmail = function (otpDetail) {
-        var response = this.http.post(this.helppoint_url + '/user/verifyEmailAddress', otpDetail).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/verifyEmailAddress', otpDetail).map(function (res) { return res.json(); });
         return response;
     };
     //sent Otp To Email Verificatation
-    SetupService.prototype.EmailVerifyforAccount = function (userMailId) {
-        var response = this.http.post(this.helppoint_url + '/user/verifyOtpToEmailForgotPassord', userMailId).map(function (res) { return res.json(); });
+    SetupService.prototype.EmailVerifyforAccount = function (email) {
+        var response = this.http.post(this.endpoint_url + '/trader/sentOtpToEmailVerificatation', email).map(function (res) { return res.json(); });
         return response;
     };
     // create login
     SetupService.prototype.createLoginDetail = function (loginDetail) {
-        var response = this.http.post(this.helppoint_url + '/user/login', loginDetail).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/login', loginDetail).map(function (res) { return res.json(); });
         return response;
     };
     // help page
     SetupService.prototype.createHelpDetail = function (helpdetails) {
-        var response = this.http.post(this.helppoint_url + '/help/helpUser', helpdetails).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/help/helpUser', helpdetails).map(function (res) { return res.json(); });
         return response;
     };
     // walllet page
-    SetupService.prototype.createWalletDetail = function (email) {
-        var response = this.http.post(this.helppoint_url + '/coin/getBalBCH', email).map(function (res) { return res.json(); });
+    SetupService.prototype.createWalletDetail = function (userMailId) {
+        var response = this.http.post(this.endpoint_url + '/coin/getBalBCH', userMailId).map(function (res) { return res.json(); });
         return response;
     };
     //Address details
     SetupService.prototype.createAddressDetail = function (email) {
-        var response = this.http.post(this.helppoint_url + '/coin/getNewBCHAddress', email).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/coin/getNewBCHAddress', email).map(function (res) { return res.json(); });
         return response;
     };
     // for date details
-    SetupService.prototype.createTransactionDetail = function (email) {
-        var response = this.http.post(this.helppoint_url + '/coin/getTxsListBCH', email).map(function (res) { return res.json(); });
+    SetupService.prototype.createTransactionDetail = function (userMailId) {
+        var response = this.http.post(this.endpoint_url + '/coin/getTxsListBCH', userMailId).map(function (res) { return res.json(); });
         return response;
     };
     // for send page
     SetupService.prototype.createSendDetail = function (senddetails) {
-        var response = this.http.post(this.helppoint_url + '/coin/sendBCH', senddetails).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/coin/sendBCH', senddetails).map(function (res) { return res.json(); });
         return response;
     };
     // update current passeword
-    SetupService.prototype.changecurrentpasswords = function (passwordValues) {
-        var response = this.http.post(this.helppoint_url + '/user/updateCurrentPassword', passwordValues).map(function (res) { return res.json(); });
+    SetupService.prototype.changecurrentpasswords = function (values) {
+        var response = this.http.post(this.endpoint_url + '/trader/updateCurrentPassword', values).map(function (res) { return res.json(); });
         return response;
     };
     // change current spending password
     SetupService.prototype.changecurrentspepasswords = function (passwordValues1) {
-        var response = this.http.post(this.helppoint_url + '/user/updateCurrentSpendingPassword', passwordValues1).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/user/updateCurrentSpendingPassword', passwordValues1).map(function (res) { return res.json(); });
         return response;
     };
     // update current location
     SetupService.prototype.sentLocation = function (position) {
-        var response = this.http.post(this.helppoint_url + '/trader/updatelocation', position).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/updatelocation', position).map(function (res) { return res.json(); });
         return response;
     };
     // get buy data
     SetupService.prototype.getBuydata = function () {
-        var response = this.http.get(this.helppoint_url + '/trader/getRates').map(function (res) { return res.json(); });
+        var response = this.http.get(this.endpoint_url + '/trader/getRates').map(function (res) { return res.json(); });
         return response;
     };
     //update price
     SetupService.prototype.updateprice = function (values) {
-        var response = this.http.post(this.helppoint_url + '/trader/buysellupdate', values).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/buysellupdate', values).map(function (res) { return res.json(); });
         return response;
     };
     //update  Acceptance
     SetupService.prototype.updateAcceptance = function (userId) {
-        var response = this.http.get(this.helppoint_url + '/chat/updateAcceptance', userId).map(function (res) { return res.json(); });
+        var response = this.http.get(this.endpoint_url + '/chat/updateAcceptance', userId).map(function (res) { return res.json(); });
         return response;
     };
     // get chat messages
     SetupService.prototype.getChatMessages = function (chatId) {
-        var response = this.http.post(this.helppoint_url + '/chat/getChatMessages', chatId).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/chat/getChatMessages', chatId).map(function (res) { return res.json(); });
         return response;
     };
     //send message to traders
     SetupService.prototype.sendMessage = function (messageDetail) {
-        var response = this.http.post(this.helppoint_url + '/chat/sendMessage', messageDetail).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/chat/sendMessage', messageDetail).map(function (res) { return res.json(); });
         return response;
     };
     //get friends list
-    SetupService.prototype.getfrienlist = function (emailId) {
-        var response = this.http.post(this.helppoint_url + '/chat/getTradersForUser', emailId).map(function (res) { return res.json(); });
+    SetupService.prototype.getfrienlist = function (email) {
+        var response = this.http.post(this.endpoint_url + '/chat/getTradersForUser', email).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.getUserChats = function (emailId) {
-        var response = this.http.get(this.helppoint_url + '/chat/getUserChats', emailId).map(function (res) { return res.json(); });
+        var response = this.http.get(this.endpoint_url + '/chat/getUserChats', emailId).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.forgotPassword = function (userMailId) {
-        var response = this.http.post(this.helppoint_url + '/user/sentOtpToEmailForgotPassword', userMailId).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/user/sentOtpToEmailForgotPassword', userMailId).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.forgotPasswordOTP = function (otp) {
-        var response = this.http.post(this.helppoint_url + '/user/verifyOtpToEmailForgotPassord', otp).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/user/verifyOtpToEmailForgotPassord', otp).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.updateForgotPassord = function (newpasswordvalues) {
-        var response = this.http.post(this.helppoint_url + '/trader/updateForgotPassordAfterVerify', newpasswordvalues).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/updateForgotPassordAfterVerify', newpasswordvalues).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.acceptRequest = function (data) {
-        var response = this.http.post(this.helppoint_url + '/chat/updateAcceptance', data).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/chat/updateAcceptance', data).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.rejectRequest = function (data) {
-        var response = this.http.post(this.helppoint_url + '/chat/updateAcceptance', data).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/chat/updateAcceptance', data).map(function (res) { return res.json(); });
         return response;
     };
     SetupService.prototype.getTraderInfo = function (emailId) {
-        var response = this.http.post(this.helppoint_url + '/trader/getTraderInfo1', emailId).map(function (res) { return res.json(); });
+        var response = this.http.post(this.endpoint_url + '/trader/getTraderInfo', emailId).map(function (res) { return res.json(); });
         return response;
     };
     SetupService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
     ], SetupService);
     return SetupService;
+    var _a;
 }());
 
 //# sourceMappingURL=setup.services.js.map
@@ -537,7 +351,109 @@ webpackEmptyAsyncContext.id = 175;
 
 /***/ }),
 
-/***/ 21:
+/***/ 218:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forgotpassword_forgotpassword__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_setup_services__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(39);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var TutorialPage = (function () {
+    function TutorialPage(userData, navCtrl, toastCtrl, events, menuCtrl, navParams, _setupService, loadingCtrl, menu, storage) {
+        this.userData = userData;
+        this.navCtrl = navCtrl;
+        this.toastCtrl = toastCtrl;
+        this.events = events;
+        this.menuCtrl = menuCtrl;
+        this.navParams = navParams;
+        this._setupService = _setupService;
+        this.loadingCtrl = loadingCtrl;
+        this.menu = menu;
+        this.storage = storage;
+        this.showSkip = true;
+        this.login1 = { username: '', password: '' };
+        this.loginDetail = { email: '', password: '', lat: '', long: '' };
+        this.submitted = false;
+    }
+    TutorialPage.prototype.startApp = function () {
+        var _this = this;
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */]).then(function () {
+            _this.storage.set('hasSeenTutorial', 'true');
+        });
+    };
+    TutorialPage.prototype.onSlideChangeStart = function (slider) {
+        this.showSkip = !slider.isEnd();
+    };
+    TutorialPage.prototype.ionViewWillEnter = function () {
+        this.slides.update();
+    };
+    TutorialPage.prototype.ionViewDidEnter = function () {
+        this.menu.enable(false);
+    };
+    TutorialPage.prototype.ionViewDidLeave = function () {
+        this.menu.enable(false);
+    };
+    TutorialPage.prototype.setCurrentPosition = function () {
+        var _this = this;
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                _this.loginDetail.lat = position.coords.latitude;
+                _this.loginDetail.long = position.coords.longitude;
+            });
+        }
+    };
+    TutorialPage.prototype.onSignup = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__signup_signup__["a" /* SignupPage */]);
+        this.storage.set('hasSeenTutorial', 'true');
+    };
+    TutorialPage.prototype.forgotPassword = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__forgotpassword_forgotpassword__["a" /* ForgotpasswordPage */]);
+        this.storage.set('hasSeenTutorial', 'true');
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('slides'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Slides */])
+    ], TutorialPage.prototype, "slides", void 0);
+    TutorialPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-tutorial',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\tutorial\tutorial.html"*/'<ion-content no-bounce>\n\n  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>\n\n    <ion-slide>\n\n      <img src="assets/img/welcome-1.jpg"  style="width: 100%;height: 100%" />\n\n    </ion-slide>\n\n\n\n    <ion-slide>\n\n      <img src="assets/img/welcome-2.jpg" style="width: 100%;height: 100%" />\n\n    <div style="position: fixed;z-index: 1;margin-top: -45px;margin-left:323px;color: #000000" (click)="startApp()">\n\n         Next &nbsp;<ion-icon name="arrow-forward"  ></ion-icon>\n\n       </div>\n\n    </ion-slide>\n\n\n\n  </ion-slides>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\tutorial\tutorial.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */]])
+    ], TutorialPage);
+    return TutorialPage;
+}());
+
+//# sourceMappingURL=tutorial.js.map
+
+/***/ }),
+
+/***/ 23:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -700,108 +616,6 @@ var UserData = (function () {
 
 /***/ }),
 
-/***/ 218:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forgotpassword_forgotpassword__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_setup_services__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(39);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var TutorialPage = (function () {
-    function TutorialPage(userData, navCtrl, toastCtrl, events, menuCtrl, navParams, _setupService, loadingCtrl, menu, storage) {
-        this.userData = userData;
-        this.navCtrl = navCtrl;
-        this.toastCtrl = toastCtrl;
-        this.events = events;
-        this.menuCtrl = menuCtrl;
-        this.navParams = navParams;
-        this._setupService = _setupService;
-        this.loadingCtrl = loadingCtrl;
-        this.menu = menu;
-        this.storage = storage;
-        this.showSkip = true;
-        this.login1 = { username: '', password: '' };
-        this.loginDetail = { email: '', password: '', ip: '123344', lat: '', long: '' };
-        this.submitted = false;
-    }
-    TutorialPage.prototype.startApp = function () {
-        var _this = this;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */]).then(function () {
-            _this.storage.set('hasSeenTutorial', 'true');
-        });
-    };
-    TutorialPage.prototype.onSlideChangeStart = function (slider) {
-        this.showSkip = !slider.isEnd();
-    };
-    TutorialPage.prototype.ionViewWillEnter = function () {
-        this.slides.update();
-    };
-    TutorialPage.prototype.ionViewDidEnter = function () {
-        this.menu.enable(false);
-    };
-    TutorialPage.prototype.ionViewDidLeave = function () {
-        this.menu.enable(false);
-    };
-    TutorialPage.prototype.setCurrentPosition = function () {
-        var _this = this;
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                _this.loginDetail.lat = position.coords.latitude;
-                _this.loginDetail.long = position.coords.longitude;
-            });
-        }
-    };
-    TutorialPage.prototype.onSignup = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__signup_signup__["a" /* SignupPage */]);
-        this.storage.set('hasSeenTutorial', 'true');
-    };
-    TutorialPage.prototype.forgotPassword = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__forgotpassword_forgotpassword__["a" /* ForgotpasswordPage */]);
-        this.storage.set('hasSeenTutorial', 'true');
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('slides'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Slides */])
-    ], TutorialPage.prototype, "slides", void 0);
-    TutorialPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tutorial',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\tutorial\tutorial.html"*/'<ion-content no-bounce>\n\n  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>\n\n    <ion-slide>\n\n      <img src="assets/img/welcome-1.jpg"  style="width: 100%;height: 100%" />\n\n    </ion-slide>\n\n\n\n    <ion-slide>\n\n      <img src="assets/img/welcome-2.jpg" style="width: 100%;height: 100%" />\n\n    <div style="position: fixed;z-index: 1;margin-top: -45px;margin-left:323px;color: #000000" (click)="startApp()">\n\n         Next &nbsp;<ion-icon name="arrow-forward"  ></ion-icon>\n\n       </div>\n\n    </ion-slide>\n\n\n\n  </ion-slides>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\tutorial\tutorial.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */]])
-    ], TutorialPage);
-    return TutorialPage;
-}());
-
-//# sourceMappingURL=tutorial.js.map
-
-/***/ }),
-
 /***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -884,7 +698,7 @@ var ChangepasswordPage = (function () {
     };
     ChangepasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-changepassword',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\changepassword\changepassword.html"*/'<ion-header>\n\n	<ion-navbar>\n\n		<button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n		<ion-title>Change Password</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="login-page">\n\n\n\n	\n\n\n\n	<form #changePasswordForm="ngForm" novalidate>\n\n		<ion-list no-lines>\n\n			<ion-item>\n\n				<ion-label stacked color="primary">New Password</ion-label>\n\n				<ion-input [(ngModel)]="newPasswordvalue.newPassword" placeholder="enter new password"name="fullName" type="text" #fullName="ngModel" required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="fullName.valid || submitted == false" color="danger" padding-left>\n\n				new password is required\n\n			</p>\n\n\n\n			<ion-item>\n\n				<ion-label stacked color="primary">Confirm New Password</ion-label>\n\n				<ion-input [(ngModel)]="newPasswordvalue.confirmNewPassword" placeholder="enter confirm new password" name="password" type="password" #password="ngModel" required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>\n\n				confirm new password is required\n\n			</p>\n\n		</ion-list>\n\n		<div padding>\n\n			<button ion-button (click)="changecurrentPassword(changePasswordForm)" type="submit" block>submit</button>\n\n		</div>\n\n	</form>\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\changepassword\changepassword.html"*/,
+            selector: 'page-changepassword',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\changepassword\changepassword.html"*/'<ion-header>\n\n	<ion-navbar>\n\n		<button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n		<ion-title>Change Password</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="login-page">\n\n\n\n	\n\n\n\n	<form #changePasswordForm="ngForm" novalidate>\n\n		<ion-list no-lines>\n\n			<ion-item>\n\n				<ion-label stacked color="primary">New Password</ion-label>\n\n				<ion-input [(ngModel)]="newPasswordvalue.newPassword" placeholder="enter new password"name="fullName" type="text" #fullName="ngModel" required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="fullName.valid || submitted == false" color="danger" padding-left>\n\n				new password is required\n\n			</p>\n\n\n\n			<ion-item>\n\n				<ion-label stacked color="primary">Confirm New Password</ion-label>\n\n				<ion-input [(ngModel)]="newPasswordvalue.confirmNewPassword" placeholder="enter confirm new password" name="password" type="password" #password="ngModel" required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>\n\n				confirm new password is required\n\n			</p>\n\n		</ion-list>\n\n		<div padding>\n\n			<button ion-button (click)="changecurrentPassword(changePasswordForm)" type="submit" block>submit</button>\n\n		</div>\n\n	</form>\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\changepassword\changepassword.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], ChangepasswordPage);
@@ -1010,7 +824,7 @@ var ChatuserlistPage = (function () {
     };
     ChatuserlistPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chatuserlist',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\chatuserlist\chatuserlist.html"*/'\n\n\n\n\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>User List</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n<div *ngFor="let friend of friendList" class="row chat-all">\n\n	<div class="col-12" *ngIf="friend.isAccepted === true">\n\n		 <span class="chat-user" (click)="openChat(friend.sender,friend.recipient,friend.chatId)">{{friend.sender}}</span>\n\n  </div>&nbsp;\n\n	  <div *ngIf="friend.isAccepted === false"  class="row ">\n\n	  	<div class="col-sm-9">\n\n	     	<span class="chat-user">{{friend.sender}}</span>\n\n	  	</div>\n\n			 	<div class="col col-6"><button class="button-backcolor" ion-button  type="submit"  (click)="acceptRequestByTrader(friend.chatId)" >Accept</button>\n\n			 	</div>\n\n			 	<div  class="col col-6">\n\n			 	 <button class="button-backcolor"  ion-button  type="submit" (click)="rejectRequestByTrader(friend.chatId)"  >Reject</button></div>\n\n	\n\n	</div>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\chatuserlist\chatuserlist.html"*/,
+            selector: 'page-chatuserlist',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\chatuserlist\chatuserlist.html"*/'\n\n\n\n\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>User List</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n<div *ngFor="let friend of friendList" class="row chat-all">\n\n	<div class="col-12" *ngIf="friend.isAccepted === true">\n\n		 <span class="chat-user" (click)="openChat(friend.sender,friend.recipient,friend.chatId)">{{friend.sender}}</span>\n\n  </div>&nbsp;\n\n	  <div *ngIf="friend.isAccepted === false"  class="row ">\n\n	  	<div class="col-sm-9">\n\n	     	<span class="chat-user">{{friend.sender}}</span>\n\n	  	</div>\n\n			 	<div class="col col-6"><button class="button-backcolor" ion-button  type="submit"  (click)="acceptRequestByTrader(friend.chatId)" >Accept</button>\n\n			 	</div>\n\n			 	<div  class="col col-6">\n\n			 	 <button class="button-backcolor"  ion-button  type="submit" (click)="rejectRequestByTrader(friend.chatId)"  >Reject</button></div>\n\n	\n\n	</div>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\chatuserlist\chatuserlist.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]])
     ], ChatuserlistPage);
@@ -1068,7 +882,7 @@ var ChatroomPage = (function () {
         };
         this.myInfo = this.messages[0];
         // this.io.sails.url = this._setupService.endpoint_url;
-        this.io.sails.url = 'http://localhost:1337';
+        this.io.sails.url = "http://198.187.28.200:3000";
         this.userdata();
         this.messageDetails.sender = this.UserId.email;
         this.nickname = this.messageDetails.sender;
@@ -1134,7 +948,7 @@ var ChatroomPage = (function () {
     };
     ChatroomPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chat-room',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\chatroom\chatroom.html"*/'\n\n\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>{{messageDetails.recipient}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-grid>\n\n    <ion-row *ngFor="let message of messages "> \n\n \n\n\n\n\n\n      <ion-col offset-3 col-9 *ngIf="message.sender !== nickname" class="message" [ngClass]="{\'my_message\': message.sender === nickname, \'other_message\': message.sender !== nickname}">\n\n        <span class="user_name">{{ message.sender }}</span><br>\n\n        <span>{{ message.content }}</span>\n\n      <div class="time">{{message.createdAt | date:\'hh:MM\'}}</div> \n\n      </ion-col>\n\n      <ion-col col-9 *ngIf="message.sender === nickname" class="message" [ngClass]="{\'my_message\': message.sender === nickname, \'other_message\': message.sender !== nickname}">\n\n        <span class="user_name">{{ message.sender }}</span><br>\n\n        <span>{{ message.content }}</span>\n\n   <div class="time">{{message.createdAt | date:\'hh:MM\'}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n    <ion-row class="message_row">\n\n      <ion-col col-9>\n\n        <ion-item no-lines>\n\n          <ion-input type="text" placeholder="type your message here..." [(ngModel)]="userContent"></ion-input>\n\n        </ion-item>\n\n      </ion-col>\n\n      <ion-col col-3>\n\n        <button ion-button clear class="button-color" (click)="sendMessage()" [disabled]="userContent ==\'\'">\n\n        Send\n\n      </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\chatroom\chatroom.html"*/,
+            selector: 'page-chat-room',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\chatroom\chatroom.html"*/'\n\n\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>{{messageDetails.recipient}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-grid>\n\n    <ion-row *ngFor="let message of messages "> \n\n \n\n\n\n\n\n      <ion-col offset-3 col-9 *ngIf="message.sender !== nickname" class="message" [ngClass]="{\'my_message\': message.sender === nickname, \'other_message\': message.sender !== nickname}">\n\n        <span class="user_name">{{ message.sender }}</span><br>\n\n        <span>{{ message.content }}</span>\n\n      <div class="time">{{message.createdAt | date:\'hh:MM\'}}</div> \n\n      </ion-col>\n\n      <ion-col col-9 *ngIf="message.sender === nickname" class="message" [ngClass]="{\'my_message\': message.sender === nickname, \'other_message\': message.sender !== nickname}">\n\n        <span class="user_name">{{ message.sender }}</span><br>\n\n        <span>{{ message.content }}</span>\n\n   <div class="time">{{message.createdAt | date:\'hh:MM\'}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n    <ion-row class="message_row">\n\n      <ion-col col-9>\n\n        <ion-item no-lines>\n\n          <ion-input type="text" placeholder="type your message here..." [(ngModel)]="userContent"></ion-input>\n\n        </ion-item>\n\n      </ion-col>\n\n      <ion-col col-3>\n\n        <button ion-button clear class="button-color" (click)="sendMessage()" [disabled]="userContent ==\'\'">\n\n        Send\n\n      </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\chatroom\chatroom.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__["a" /* SetupService */]])
     ], ChatroomPage);
@@ -1152,8 +966,8 @@ var ChatroomPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_setup_services__ = __webpack_require__(14);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1165,7 +979,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-// import { DashboardPage } from '../dashboard/dashboard';
 
 
 /**
@@ -1175,154 +988,178 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var SettingPage = (function () {
-    function SettingPage(navCtrl, alertCtrl, toastCtrl, _setupService, loadingCtrl, userData, platform) {
-        var _this = this;
+    function SettingPage(navCtrl, alertCtrl, toastCtrl, _setupService, loadingCtrl) {
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
         this.toastCtrl = toastCtrl;
         this._setupService = _setupService;
         this.loadingCtrl = loadingCtrl;
-        this.userData = userData;
-        this.platform = platform;
-        this.pet = "puppies";
-        this.isAndroid = false;
-        this.submitted = false;
         this.verifyEmail = false;
         this.userEmail = { email: '' };
-        this.passwordValues = { "userMailId": "", "currentPassword": "", "newPassword": "", "confirmNewPassword": "" };
-        this.passwordValues1 = { "userMailId": "", "currentSpendingPassword": "", "newSpendingPassword": "", "confirmNewPassword": "" };
-        this.isAndroid = platform.is('android');
-        var user = JSON.parse(localStorage.getItem('logindetail'));
-        this.email = user.user.email;
-        var backAction = platform.registerBackButtonAction(function () {
-            _this.navCtrl.pop();
-            backAction();
-        });
+        this.passwordValue = { "userMailId": "", "currentPassword": "", "newPassword": "", "confirmNewPassword": "" };
+        this.otpvalues = { "email": "", "otp": "" };
+        this.userdata();
+        //this.verifyEmail=false;        
     }
-    SettingPage_1 = SettingPage;
-    SettingPage.prototype.changeCurrentPassword = function (Form) {
-        var _this = this;
-        this.passwordValues.userMailId = this.email;
-        if (Form.valid) {
-            this.userData.send(this.userEmail.email);
-            var loading_1 = this.loadingCtrl.create({
-                content: 'update password...'
-            });
-            loading_1.present();
-            this._setupService.changecurrentpasswords(this.passwordValues).subscribe(function (result) {
-                console.log(_this.passwordValues);
-                if (result.statusCode == 200) {
-                    // this.responseData = result;
-                    console.log("update password completed");
-                    var toast = _this.toastCtrl.create({
-                        message: 'update password successfully completed',
-                        showCloseButton: true,
-                        closeButtonText: 'Ok',
-                        duration: 5000
-                    });
-                    toast.present();
-                    //      let prompt = this.alertCtrl.create({
-                    //     message: 'update password successfully completed'
-                    //
-                    // });
-                    loading_1.dismiss();
-                    _this.navCtrl.setRoot(SettingPage_1);
-                }
-                else {
-                    // /this.responseData = result;
-                    loading_1.dismiss();
-                    var toast = _this.toastCtrl.create({
-                        message: _this.response.message,
-                        showCloseButton: true,
-                        closeButtonText: 'Ok',
-                        duration: 5000
-                    });
-                    toast.present();
-                }
-            });
+    SettingPage.prototype.userdata = function () {
+        this.user = JSON.parse(localStorage.getItem('logindetail'));
+        if (this.user != null || this.user != undefined) {
+            this.userEmail.email = this.user.trader.email;
+            this.verifyEmail = this.user.trader.verifyEmail;
         }
     };
-    SettingPage.prototype.changespendingPassword = function (Form) {
-        var _this = this;
-        this.passwordValues1.userMailId = this.email;
-        if (Form.valid) {
-            this.userData.send(this.userEmail.email);
-            var loading_2 = this.loadingCtrl.create({
-                content: 'update password...'
-            });
-            loading_2.present();
-            this._setupService.changecurrentspepasswords(this.passwordValues1).subscribe(function (result) {
-                console.log(_this.passwordValues1);
-                if (result.statusCode == 200) {
-                    _this.response = result;
-                    console.log("update password completed");
-                    var toast = _this.toastCtrl.create({
-                        message: 'update password successfully completed',
-                        showCloseButton: true,
-                        closeButtonText: 'Ok',
-                        duration: 5000
-                    });
-                    toast.present();
-                    //      let prompt = this.alertCtrl.create({
-                    //     message: 'update password successfully completed'
-                    //
-                    // });
-                    loading_2.dismiss();
-                    _this.navCtrl.setRoot(SettingPage_1);
-                }
-                else {
-                    _this.response = result;
-                    loading_2.dismiss();
-                    var toast = _this.toastCtrl.create({
-                        message: _this.response.message,
-                        showCloseButton: true,
-                        closeButtonText: 'Ok',
-                        duration: 5000
-                    });
-                    toast.present();
-                }
-            });
-        }
+    SettingPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SettingPage');
     };
-    SettingPage = SettingPage_1 = __decorate([
+    // change current password
+    SettingPage.prototype.changeCurrentPassword = function () {
+        var _this = this;
+        var prompt = this.alertCtrl.create({
+            title: 'Change Password',
+            inputs: [
+                {
+                    name: 'currentPassword',
+                    type: 'password',
+                    placeholder: 'Current Password',
+                },
+                {
+                    name: 'newPassword',
+                    type: 'password',
+                    placeholder: 'New Password',
+                },
+                {
+                    name: 'confirmNewPassword',
+                    type: 'password',
+                    placeholder: 'Confirm New Password',
+                },
+            ],
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function (data) {
+                    }
+                },
+                {
+                    text: 'submit',
+                    handler: function (data) {
+                        var loading = _this.loadingCtrl.create({
+                            content: 'updating current password...'
+                        });
+                        loading.present();
+                        _this.passwordValue.userMailId = _this.userEmail.email;
+                        _this.passwordValue.currentPassword = data.currentPassword;
+                        _this.passwordValue.newPassword = data.newPassword;
+                        _this.passwordValue.confirmNewPassword = data.confirmNewPassword;
+                        _this._setupService.changecurrentpasswords(_this.passwordValue).subscribe(function (response) {
+                            if (response.statusCode == 200) {
+                                loading.dismiss();
+                                var toast = _this.toastCtrl.create({
+                                    message: 'Password change successfully',
+                                    showCloseButton: true,
+                                    closeButtonText: 'Ok',
+                                    duration: 5000
+                                });
+                                toast.present();
+                                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__["a" /* DashboardPage */]);
+                            }
+                            else {
+                                loading.dismiss();
+                                var toast = _this.toastCtrl.create({
+                                    message: response.message,
+                                    showCloseButton: true,
+                                    closeButtonText: 'Ok',
+                                    duration: 5000
+                                });
+                                toast.present();
+                            }
+                        });
+                    }
+                }
+            ],
+            enableBackdropDismiss: false
+        });
+        prompt.present();
+    };
+    // veryfy email id
+    SettingPage.prototype.veryfyEmail = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'sending otp in your emailId..'
+        });
+        loading.present();
+        this._setupService.EmailVerifyforAccount(this.userEmail).subscribe(function (response) {
+            loading.dismiss();
+            var prompt = _this.alertCtrl.create({
+                title: 'Enter One Time Password',
+                inputs: [
+                    {
+                        name: 'otp',
+                        type: 'password',
+                        placeholder: 'One Time Password',
+                    }
+                ],
+                buttons: [
+                    {
+                        text: 'Cancel',
+                        handler: function (data) {
+                        }
+                    },
+                    {
+                        text: 'submit',
+                        handler: function (data) {
+                            var loading = _this.loadingCtrl.create({
+                                content: 'verifying OtP...'
+                            });
+                            loading.present();
+                            _this.otpvalues.email = _this.userEmail.email;
+                            _this.otpvalues.otp = data.otp;
+                            _this._setupService.VerificationEmail(_this.otpvalues).subscribe(function (response) {
+                                console.log("RES = = " + JSON.stringify(response));
+                                if (response.statusCode == 200) {
+                                    loading.dismiss();
+                                    localStorage.setItem('logindetail', JSON.stringify(response));
+                                    _this.user = JSON.parse(localStorage.getItem('logindetail'));
+                                    console.log("this.user.trader.email" + response.trader.email);
+                                    console.log("this.user.trader.verifyEmail" + response.trader.verifyEmail);
+                                    _this.userEmail.email = _this.user.trader.email;
+                                    _this.verifyEmail = _this.user.trader.verifyEmail;
+                                    var toast = _this.toastCtrl.create({
+                                        message: 'verify email successfully !!',
+                                        showCloseButton: true,
+                                        closeButtonText: 'Ok',
+                                        duration: 5000
+                                    });
+                                    toast.present();
+                                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__["a" /* DashboardPage */]);
+                                }
+                                else {
+                                    loading.dismiss();
+                                    var toast = _this.toastCtrl.create({
+                                        message: response.message,
+                                        showCloseButton: true,
+                                        closeButtonText: 'Ok',
+                                        duration: 5000
+                                    });
+                                    toast.present();
+                                }
+                            });
+                        }
+                    }
+                ],
+                enableBackdropDismiss: false
+            });
+            prompt.present();
+        });
+    };
+    SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-setting',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\setting\setting.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n  	 <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n<!-- /////////////////////////////////////////// -->\n\n\n\n\n\n  <br><br><br><br>\n\n  <ion-toolbar [color]="currentColor">\n\n    <ion-segment [(ngModel)]="pet">\n\n      <ion-segment-button value="puppies">Password\n\n      </ion-segment-button>\n\n      <ion-segment-button value="kittens">\n\n        SpendingPassword\n\n      </ion-segment-button>\n\n     </ion-segment>\n\n  </ion-toolbar>\n\n\n\n\n\n\n\n  <ion-content padding>\n\n       <form #pForm="ngForm" novalidate>\n\n        <ion-list no-lines class="form-input-fields">\n\n\n\n  <div [ngSwitch]="pet">\n\n    <ion-list *ngSwitchCase="\'puppies\'">\n\n\n\n<br><br><br><br>\n\n      <ion-item>\n\n       <ion-input [(ngModel)]="passwordValues.currentPassword" placeholder="Enter Current Password" name="currentPassword" type="password" #currentPassword="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n       <p ion-text [hidden]="currentPassword.valid || submitted == false" color="danger" padding-left>\n\n       currentPassword is required\n\n      </p>\n\n\n\n      <ion-item>\n\n      <ion-input [(ngModel)]="passwordValues.newPassword" placeholder="Enter New Password" name="newPassword" type="password" #newPassword="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="newPassword.valid || submitted == false" color="danger" padding-left>\n\n        newPassword is required\n\n      </p>\n\n\n\n      <ion-item>\n\n      <ion-input [(ngModel)]="passwordValues.confirmNewPassword" placeholder="Enter Confirm Password" name="confirmNewPassword" type="password" #confirmNewPassword="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="confirmNewPassword.valid || submitted == false" color="danger" padding-left>\n\n       confirmNewPassword is required\n\n      </p>\n\n\n\n      <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" ion-button (click)="changeCurrentPassword(pForm)" type="submit" block>Submit</button>\n\n\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-list>\n\n\n\n</div></ion-list></form>\n\n\n\n        <form #psForm="ngForm" novalidate>\n\n        <ion-list no-lines class="form-input-fields">\n\n        <div [ngSwitch]="pet">\n\n       <ion-list *ngSwitchCase="\'kittens\'">\n\n\n\n     <br><br><br><br>\n\n      <ion-item>\n\n      <ion-input [(ngModel)]="passwordValues1.currentSpendingPassword" placeholder="Enter currentSpendingPassword" name="currentSpendingPassword" type="password" #currentSpendingPassword="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n       <p ion-text [hidden]="currentSpendingPassword.valid || submitted == false" color="danger" padding-left>\n\n       currentSpendingPassword is required\n\n      </p>\n\n\n\n     <ion-item>\n\n      <ion-input [(ngModel)]="passwordValues1.newSpendingPassword" placeholder="Enter newSpendingPassword" name="newSpendingPassword" type="password" #newSpendingPassword="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="newSpendingPassword.valid || submitted == false" color="danger" padding-left>\n\n        newSpendingPassword is required\n\n      </p>\n\n\n\n     <ion-item>\n\n      <ion-input [(ngModel)]="passwordValues1.confirmNewPassword" placeholder="Enter confirmSpendingPassword" name="confirmNewPassword" type="password" #confirmNewPassword="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="confirmNewPassword.valid || submitted == false" color="danger" padding-left>\n\n       confirmSpendingPassword is required\n\n      </p>\n\n\n\n      <button class="button-backcolor" ion-button (click)="changespendingPassword(psForm)" type="submit" block>Submit</button>\n\n</ion-list>\n\n</div>\n\n</ion-list>\n\n</form>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\setting\setting.html"*/,
+            selector: 'page-setting',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\setting\setting.html"*/'<!--\n\n  Generated template for the SettingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n     <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<div padding-top text-center >\n\n    <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">\n\n\n\n    <ion-list inset>     \n\n          \n\n          <span style="margin-right: 259px !important;" > <strong>Account verify</strong></span>\n\n          <br>{{userEmail.email}}\n\n          <span (click)="veryfyEmail(userEmail.email)" class="pull-left red-text" *ngIf="verifyEmail==false"> Not Verified</span>\n\n          <span class="pull-right green-text" *ngIf="verifyEmail==true"> Verified</span><hr>        \n\n          <button ion-item (click)="changeCurrentPassword()">Change Password</button><hr> \n\n \n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\setting\setting.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__["a" /* SetupService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_user_data__["a" /* UserData */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], SettingPage);
     return SettingPage;
-    var SettingPage_1;
 }());
 
-//  changespendingPassword(Form: NgForm){
-//   this.passwordValues.userMailId=this.email;
-//   this.submitted = true;
-//   if (Form.valid) {
-//        this.userData.send(this.userEmail.email);
-//
-//
-//
-//      this._setupService.changecurrentspendingpasswords(this.passwordValues1).subscribe((result) => {
-//
-//          console.log(this.passwordValues1);
-//           if(result.statusCode== 200){
-//
-//               // localStorage.setItem('senddetails',JSON.stringify(this.responseData));
-//               // this.user=JSON.parse(localStorage.getItem('senddetails'));
-//
-//
-//       }
-//     });
-//     }
-// }
-//
-// }
 //# sourceMappingURL=setting.js.map
 
 /***/ }),
@@ -1334,7 +1171,7 @@ var SettingPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_setup_services__ = __webpack_require__(14);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1423,7 +1260,7 @@ var HelpPage = (function () {
     };
     HelpPage = HelpPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-help',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\help\help.html"*/'<!--\n\n  Generated template for the HelpPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n	  <ion-navbar>\n\n  	 <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Help</ion-title>\n\n  </ion-navbar>\n\n </ion-header>\n\n\n\n<form #helpForm="ngForm" novalidate>\n\n    <ion-list no-lines class="form-input-fields">\n\n\n\n      <br /> <br /> <br /><br /> <br /><br /><br /><br />\n\n      <ion-item>\n\n\n\n        <ion-input [(ngModel)]="helpdetails.subject" placeholder="Type Your Subject " name="subject" type="text" #subject="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="subject.valid || submitted == false" color="danger" padding-left>\n\n        subject is required\n\n      </p>\n\n\n\n      <ion-item>\n\n        <ion-input [(ngModel)]="helpdetails.message" placeholder="Type Your Message" name="message" type="ion-textarea" #message="ngModel" required class="login-input" >\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="message.valid || submitted == false" color="danger" padding-left>\n\n        Message is required\n\n      </p>\n\n\n\n      <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" ion-button (click)="onsend(helpForm)" type="submit" block>Send</button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <hr>\n\n\n\n    </ion-list>\n\n\n\n\n\n  </form>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\help\help.html"*/
+            selector: 'page-help',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\help\help.html"*/'<!--\n\n  Generated template for the HelpPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n	  <ion-navbar>\n\n  	 <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Help</ion-title>\n\n  </ion-navbar>\n\n </ion-header>\n\n\n\n<form #helpForm="ngForm" novalidate>\n\n    <ion-list no-lines class="form-input-fields">\n\n\n\n      <br /> <br /> <br /><br /> <br /><br /><br /><br />\n\n      <ion-item>\n\n\n\n        <ion-input [(ngModel)]="helpdetails.subject" placeholder="Type Your Subject " name="subject" type="text" #subject="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="subject.valid || submitted == false" color="danger" padding-left>\n\n        subject is required\n\n      </p>\n\n\n\n      <ion-item>\n\n        <ion-input [(ngModel)]="helpdetails.message" placeholder="Type Your Message" name="message" type="ion-textarea" #message="ngModel" required class="login-input" >\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="message.valid || submitted == false" color="danger" padding-left>\n\n        Message is required\n\n      </p>\n\n\n\n      <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" ion-button (click)="onsend(helpForm)" type="submit" block>Send</button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <hr>\n\n\n\n    </ion-list>\n\n\n\n\n\n  </form>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\help\help.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
@@ -1450,7 +1287,7 @@ var HelpPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WalletPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_setup_services__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__send_send__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_barcode_scanner__ = __webpack_require__(240);
@@ -1582,7 +1419,7 @@ var WalletPage = (function () {
     };
     WalletPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-wallet',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\wallet\wallet.html"*/'<!--\n\n  Generated template for the WalletPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n  	  <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Wallet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n    \n\n<ion-content padding>\n\n     <ion-list>\n\n      <h3 align="center">My Balance</h3>\n\n    <div>\n\n      <p align="center">{{balance}}</p>\n\n    </div>\n\n\n\n      \n\n      <!-- <h3 align="center">Address</h3>\n\n     <div>\n\n      <p align="center">{{address}}</p>\n\n    </div> -->\n\n  <button class="button-backcolor" ion-button type="submit" block (click)="openSendPage(SendPage)">Send</button>\n\n   <button class="button-backcolor" ion-button type="submit" block (click)="doPrompt(send-amount)">Recieve</button>\n\n</ion-list>\n\n<h3 align="center">Transaction list</h3>\n\n \n\n      <ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n      Date\n\n\n\n    </ion-col>\n\n    <ion-col>\n\n      Amount\n\n    </ion-col>\n\n    <ion-col>\n\n      Transaction list\n\n     \n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n<ion-grid>\n\n <ion-row *ngFor="let item of tx">\n\n    <ion-col>\n\n      {{item.time | date : \'shortDate\'}}\n\n    </ion-col>\n\n    <ion-col>\n\n     {{item.amount}}\n\n    </ion-col>\n\n    <ion-col>\n\n     {{(item.txid | slice:0:10)+".."}}\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n    </ion-content>\n\n\n\n\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\wallet\wallet.html"*/,
+            selector: 'page-wallet',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\wallet\wallet.html"*/'<!--\n\n  Generated template for the WalletPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n  	  <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Wallet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n    \n\n<ion-content padding>\n\n     <ion-list>\n\n      <h3 align="center">My Balance</h3>\n\n    <div>\n\n      <p align="center">{{balance}}</p>\n\n    </div>\n\n\n\n      \n\n      <!-- <h3 align="center">Address</h3>\n\n     <div>\n\n      <p align="center">{{address}}</p>\n\n    </div> -->\n\n  <button class="button-backcolor" ion-button type="submit" block (click)="openSendPage(SendPage)">Send</button>\n\n   <button class="button-backcolor" ion-button type="submit" block (click)="doPrompt(send-amount)">Recieve</button>\n\n</ion-list>\n\n<h3 align="center">Transaction list</h3>\n\n \n\n      <ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n      Date\n\n\n\n    </ion-col>\n\n    <ion-col>\n\n      Amount\n\n    </ion-col>\n\n    <ion-col>\n\n      Transaction list\n\n     \n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n<ion-grid>\n\n <ion-row *ngFor="let item of tx">\n\n    <ion-col>\n\n      {{item.time | date : \'shortDate\'}}\n\n    </ion-col>\n\n    <ion-col>\n\n     {{item.amount}}\n\n    </ion-col>\n\n    <ion-col>\n\n     {{(item.txid | slice:0:10)+".."}}\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n    </ion-content>\n\n\n\n\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\wallet\wallet.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
@@ -1612,7 +1449,7 @@ var WalletPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_user_data__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1701,7 +1538,7 @@ var SendPage = (function () {
     };
     SendPage = SendPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-send',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\send\send.html"*/'<ion-header>\n\n    <ion-navbar>\n\n     <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Send</ion-title>\n\n  </ion-navbar>\n\n </ion-header>\n\n<ion-content>\n\n<form #sForm="ngForm" novalidate>\n\n    <ion-list no-lines class="form-input-fields">\n\n  <br /><br /><br /><br /><br />\n\n\n\n    <ion-item>\n\n      <ion-input [(ngModel)]="senddetails.amount" placeholder="Enter Amount" name="amount" type="text" #amount="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n\n\n      <p ion-text [hidden]="amount.valid || submitted == false" color="danger" padding-left>\n\n       Amount is required\n\n      </p>\n\n\n\n      <ion-item>\n\n\n\n        <ion-input [(ngModel)]="senddetails.address" placeholder="Enter Address" name="address" type="text" #address="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="address.valid || submitted == false" color="danger" padding-left>\n\n        Address is required\n\n      </p>\n\n\n\n      <ion-item>\n\n        <ion-input [(ngModel)]="senddetails.spendingPassword" placeholder="Enter Spending Password" name="spendingPassword" type="password" #spendingPassword="ngModel" required class="login-input" >\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="spendingPassword.valid || submitted == false" color="danger" padding-left>\n\n        SpendingPassword is required\n\n      </p>\n\n\n\n      <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" ion-button (click)="onsendBalance(sForm)" type="submit" block>Send</button>\n\n          <!-- <button class="button-backcolor" ion-button (click)="onsendBalance1(sForm)" type="submit" block>Resset</button> -->\n\n        </ion-col>\n\n      </ion-row>\n\n      <hr>\n\n\n\n    </ion-list>\n\n\n\n\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\send\send.html"*/,
+            selector: 'page-send',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\send\send.html"*/'<ion-header>\n\n    <ion-navbar>\n\n     <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Send</ion-title>\n\n  </ion-navbar>\n\n </ion-header>\n\n<ion-content>\n\n<form #sForm="ngForm" novalidate>\n\n    <ion-list no-lines class="form-input-fields">\n\n  <br /><br /><br /><br /><br />\n\n\n\n    <ion-item>\n\n      <ion-input [(ngModel)]="senddetails.amount" placeholder="Enter Amount" name="amount" type="text" #amount="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n\n\n      <p ion-text [hidden]="amount.valid || submitted == false" color="danger" padding-left>\n\n       Amount is required\n\n      </p>\n\n\n\n      <ion-item>\n\n\n\n        <ion-input [(ngModel)]="senddetails.address" placeholder="Enter Address" name="address" type="text" #address="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n          required>\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="address.valid || submitted == false" color="danger" padding-left>\n\n        Address is required\n\n      </p>\n\n\n\n     <!--  <ion-item>\n\n        <ion-input [(ngModel)]="senddetails.spendingPassword" placeholder="Enter Spending Password" name="spendingPassword" type="password" #spendingPassword="ngModel" required class="login-input" >\n\n        </ion-input>\n\n      </ion-item>\n\n      <p ion-text [hidden]="spendingPassword.valid || submitted == false" color="danger" padding-left>\n\n        SpendingPassword is required\n\n      </p> -->\n\n\n\n      <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" ion-button (click)="onsendBalance(sForm)" type="submit" block>Send</button>\n\n          <!-- <button class="button-backcolor" ion-button (click)="onsendBalance1(sForm)" type="submit" block>Resset</button> -->\n\n        </ion-col>\n\n      </ion-row>\n\n      <hr>\n\n\n\n    </ion-list>\n\n\n\n\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\send\send.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_user_data__["a" /* UserData */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
@@ -1726,8 +1563,8 @@ var SendPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConferenceData; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_data__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(219);
@@ -1909,7 +1746,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_in_app_browser__ = __webpack_require__(312);
@@ -1919,20 +1756,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(324);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tutorial_tutorial__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_forgotpassword_forgotpassword__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_forgotpassword_forgotpassword__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_signup_signup__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_changepassword_changepassword__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_chatuserlist_chatuserlist__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_chatroom_chatroom__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_setup_services__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_dashboard_dashboard__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_dashboard_dashboard__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_setting_setting__ = __webpack_require__(236);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_help_help__ = __webpack_require__(237);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_wallet_wallet__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_send_send__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_geolocation__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_conference_data__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_user_data__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ngx_qrcode2__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_native_barcode_scanner__ = __webpack_require__(240);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ionic_native_clipboard__ = __webpack_require__(241);
@@ -2058,12 +1895,12 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_signup_signup__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_chatuserlist_chatuserlist__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_dashboard_dashboard__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_dashboard_dashboard__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_setting_setting__ = __webpack_require__(236);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_help_help__ = __webpack_require__(237);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_wallet_wallet__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_conference_data__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_user_data__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2252,7 +2089,7 @@ var ConferenceApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */])
     ], ConferenceApp.prototype, "nav", void 0);
     ConferenceApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\app\app.template.html"*/'<ion-split-pane>\n\n\n\n \n\n\n\n  <!-- logged in menu -->\n\n  <ion-menu id="loggedInMenu" [content]="content">\n\n\n\n    <ion-header>\n\n      <ion-toolbar>\n\n         <ion-title style="color: #fff; padding: 0 20px 1px;" text-left> <ion-icon name="contact" class="icon-chat-user">     \n\n          </ion-icon><br>\n\n          <small class="white-text">{{this.emailId}}</small>\n\n       </ion-title>\n\n      </ion-toolbar>\n\n    </ion-header>\n\n\n\n    <ion-content class="outer-content">\n\n\n\n      <ion-list>\n\n        <!-- <ion-list-header>\n\n          Account\n\n        </ion-list-header> -->\n\n        <button class="sidemenu-item" ion-item menuClose *ngFor="let p of loggedInPages" (click)="openPage(p)">\n\n          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n\n          {{p.title}}\n\n        </button>\n\n      </ion-list>\n\n\n\n\n\n    </ion-content>\n\n\n\n  </ion-menu>\n\n\n\n  <!-- main navigation -->\n\n  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>\n\n\n\n</ion-split-pane>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\app\app.template.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\app\app.template.html"*/'<ion-split-pane>\n\n\n\n \n\n\n\n  <!-- logged in menu -->\n\n  <ion-menu id="loggedInMenu" [content]="content">\n\n\n\n    <ion-header>\n\n      <ion-toolbar>\n\n         <ion-title style="color: #fff; padding: 0 20px 1px;" text-left> <ion-icon name="contact" class="icon-chat-user">     \n\n          </ion-icon><br>\n\n          <small class="white-text">{{this.emailId}}</small>\n\n       </ion-title>\n\n      </ion-toolbar>\n\n    </ion-header>\n\n\n\n    <ion-content class="outer-content">\n\n\n\n      <ion-list>\n\n        <!-- <ion-list-header>\n\n          Account\n\n        </ion-list-header> -->\n\n        <button class="sidemenu-item" ion-item menuClose *ngFor="let p of loggedInPages" (click)="openPage(p)">\n\n          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n\n          {{p.title}}\n\n        </button>\n\n      </ion-list>\n\n\n\n\n\n    </ion-content>\n\n\n\n  </ion-menu>\n\n\n\n  <!-- main navigation -->\n\n  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>\n\n\n\n</ion-split-pane>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\app\app.template.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */],
             __WEBPACK_IMPORTED_MODULE_14__providers_user_data__["a" /* UserData */],
@@ -2286,10 +2123,10 @@ var ConferenceApp = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forgotpassword_forgotpassword__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forgotpassword_forgotpassword__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dashboard_dashboard__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dashboard_dashboard__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_setup_services__ = __webpack_require__(14);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2318,8 +2155,7 @@ var LoginPage = (function () {
         this._setupService = _setupService;
         this.loadingCtrl = loadingCtrl;
         this.login = { username: '', password: '' };
-        // loginDetail: LoginDetail = { email: '', password: '', lat:'', long:'' };
-        this.loginDetail = { email: '', password: '', ip: '123344', lat: '', long: '' };
+        this.loginDetail = { email: '', password: '', lat: '', long: '' };
         this.submitted = false;
         this.setCurrentPosition();
     }
@@ -2338,17 +2174,15 @@ var LoginPage = (function () {
         if (form.valid) {
             this.userData.login(this.login.username);
             var loading_1 = this.loadingCtrl.create({
-                content: 'login please wait...'
+                content: 'Logging please wait...'
             });
             loading_1.present();
             this._setupService.createLoginDetail(this.loginDetail).subscribe(function (result) {
                 if (result.statusCode == 200) {
                     _this.responseData = result;
-                    // console.log(this.responseData.user.email);          
                     localStorage.setItem('logindetail', JSON.stringify(_this.responseData));
                     _this.user = JSON.parse(localStorage.getItem('logindetail'));
-                    // alert("this.user = = "+this.user);
-                    _this.userName = _this.responseData.user.email;
+                    _this.userName = _this.responseData.trader.email;
                     _this.events.publish("shareObject", _this.userName);
                     loading_1.dismiss();
                     _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__dashboard_dashboard__["a" /* DashboardPage */]);
@@ -2392,16 +2226,9 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-user',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\login\login.html"*/'\n\n\n\n<ion-content>\n\n	<div  text-center style=" margin-top: 26px;">\n\n		<img src="assets/img/streetx-logo.png" alt="Ionic logo" class="brand-logo">\n\n	</div>\n\n	<ion-row class="logo" text-center>\n\n		 <ion-col col-12 style="    font-size: 2em;    margin-top: 10px;    color: #3896ea;" >\n\n		 	<ion-icon name="contact" class="icon-chat-user"></ion-icon></ion-col>\n\n		 <ion-col col-12><h3 class="text_Color"><strong >Sign In</strong></h3></ion-col>\n\n	</ion-row>\n\n	<form #loginForm="ngForm" novalidate>\n\n		<ion-list no-lines class="form-input-fields">\n\n			<ion-item>\n\n				<ion-input  autocomplete="on" [(ngModel)]="loginDetail.email" placeholder="Enter Your Emailid" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n					required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>\n\n				email is required\n\n			</p>\n\n\n\n			<ion-item>\n\n				<ion-input [(ngModel)]="loginDetail.password" placeholder="Enter Your Password" name="password" type="password" #password="ngModel" required class="login-input" >\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>\n\n				Password is required\n\n			</p>\n\n			<ion-row>\n\n				<ion-col text-right>\n\n			      <a style="font-size: 0.8em; color: #bdbdbd;" (click)="forgotPassword()">Forgot password?</a>\n\n			    </ion-col>\n\n			</ion-row>\n\n			<ion-row responsive-sm>\n\n				<ion-col >\n\n					<button class="button-backcolor" ion-button (click)="onlogin1(loginForm)" type="submit" block>Login</button>\n\n				</ion-col>\n\n			</ion-row>\n\n			<hr>\n\n			<ion-row>\n\n				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">\n\n					Not a member? <a class="text_Color" (click)="onSignup()">Create an account</a>\n\n				</ion-col>\n\n			</ion-row>\n\n		</ion-list>\n\n\n\n\n\n	</form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\login\login.html"*/
+            selector: 'page-user',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\login\login.html"*/'\n\n\n\n<ion-content>\n\n	<div  text-center style=" margin-top: 26px;">\n\n		<img src="assets/img/streetx-logo.png" alt="Ionic logo" class="brand-logo">\n\n	</div>\n\n	<ion-row class="logo" text-center>\n\n		 <ion-col col-12 style="    font-size: 2em;    margin-top: 10px;    color: #3896ea;" >\n\n		 	<ion-icon name="contact" class="icon-chat-user"></ion-icon></ion-col>\n\n		 <ion-col col-12><h3 class="text_Color"><strong >Sign In</strong></h3></ion-col>\n\n	</ion-row>\n\n	<form #loginForm="ngForm" novalidate>\n\n		<ion-list no-lines class="form-input-fields">\n\n			<ion-item>\n\n				<ion-input  autocomplete="on" [(ngModel)]="loginDetail.email" placeholder="Enter Your Emailid" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off" class="login-input"\n\n					required>\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>\n\n				email is required\n\n			</p>\n\n\n\n			<ion-item>\n\n				<ion-input [(ngModel)]="loginDetail.password" placeholder="Enter Your Password" name="password" type="password" #password="ngModel" required class="login-input" >\n\n				</ion-input>\n\n			</ion-item>\n\n			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>\n\n				Password is required\n\n			</p>\n\n			<ion-row>\n\n				<ion-col text-right>\n\n			      <a style="font-size: 0.8em; color: #bdbdbd;" (click)="forgotPassword()">Forgot password?</a>\n\n			    </ion-col>\n\n			</ion-row>\n\n			<ion-row responsive-sm>\n\n				<ion-col >\n\n					<button class="button-backcolor" ion-button (click)="onlogin1(loginForm)" type="submit" block>Login</button>\n\n				</ion-col>\n\n			</ion-row>\n\n			<hr>\n\n			<ion-row>\n\n				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">\n\n					Not a member? <a class="text_Color" (click)="onSignup()">Create an account</a>\n\n				</ion-col>\n\n			</ion-row>\n\n		</ion-list>\n\n\n\n\n\n	</form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\login\login.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_setup_services__["a" /* SetupService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_user_data__["a" /* UserData */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__providers_setup_services__["a" /* SetupService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -2417,7 +2244,7 @@ var LoginPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_data__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_setup_services__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2447,7 +2274,8 @@ var SignupPage = (function () {
         this.toastCtrl = toastCtrl;
         this.platform = platform;
         this.signup1 = { username: '', password: '' };
-        this.signup = { name: '', email: '', password: '', confirmpassword: '', spendingpassword: '', confirmspendingpassword: '', mobileNumber: '' };
+        // signup: SignUpDetails = { name: '', email: '', password: '', confirmpassword: '', spendingpassword: '', confirmspendingpassword:'',mobileNumber:''};
+        this.signup = { name: '', email: '', password: '', confirmpassword: '', mobileNumber: '' };
         this.otp = { email: '', otp: '' };
         this.submitted = false;
         var backAction = platform.registerBackButtonAction(function () {
@@ -2569,7 +2397,7 @@ var SignupPage = (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-user',template:/*ion-inline-start:"F:\Sails\streetX-moble-app\src\pages\signup\signup.html"*/'\n\n<ion-content>\n\n\n\n	<div  text-center style=" margin-top: 0 	px;">\n\n		<img src="assets/img/streetx-logo.png" alt="Ionic logo" class="brand-logo">\n\n	</div>\n\n	<ion-row class="logo" text-center>\n\n		 <ion-col col-12 style="    font-size: 2em;    margin-top: 0px;    color: #3896ea;"><ion-icon name="create" class="icon-chat-user"></ion-icon></ion-col>\n\n		 <ion-col col-12><h3 class="button-color" ><strong>Create Account</strong></h3></ion-col>\n\n	</ion-row>\n\n	<form #signupForm="ngForm" novalidate>\n\n		<ion-list no-lines class="form-input-fields">\n\n			<ion-row>\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.name" placeholder="Full name" name="name" type="text" #name="ngModel" required class="login-input">\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="name.valid || submitted == false" color="danger" padding-left>\n\n						Name is required\n\n					</p>\n\n				</ion-col>\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.mobileNumber" placeholder="Enter mobile number" name="mobileNumber" number="number" #mobileNumber="ngModel" required class="login-input">\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="mobileNumber.valid || submitted == false" color="danger" padding-left>\n\n						mobileNumber is required\n\n					</p>\n\n				</ion-col>\n\n			</ion-row>\n\n			<ion-row>\n\n				<ion-col class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.email" placeholder="Enter emailid" name="email" type="email" #email="ngModel" required class="login-input" >\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>\n\n						email is required\n\n					</p>\n\n\n\n\n\n				</ion-col>\n\n			</ion-row>\n\n			<ion-row>\n\n\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.password" placeholder="Enter password" name="password" type="password" #password="ngModel" required class="login-input" >\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>\n\n						Password is required\n\n					</p>\n\n				</ion-col>\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.confirmpassword" placeholder="Re-enter password" name="confirmpassword" type="password" #confirmpassword="ngModel" required class="login-input">\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="confirmpassword.valid || submitted == false" color="danger" padding-left>\n\n						confirm password is required\n\n					</p>\n\n						</ion-col>\n\n			            </ion-row>\n\n					<ion-input [(ngModel)]="signup.spendingpassword" placeholder="Enter spending password" name="spendingpassword" type="password" #spendingpassword="ngModel" required class="login-input" >\n\n						</ion-input>\n\n						\n\n						<ion-input [(ngModel)]="signup.confirmspendingpassword" placeholder="Enter  confirmspendingpassword" name="confirmspendingpassword" type="password" #confirmspendingpassword="ngModel" required class="login-input" >\n\n						</ion-input>\n\n			\n\n\n\n			<ion-row responsive-sm>\n\n				<ion-col >\n\n					<button class="button-backcolor"  ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>\n\n				</ion-col>\n\n			</ion-row>\n\n			<hr>\n\n			<ion-row>\n\n				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">\n\n					Already a member? <a class="button-color" (click)="onLogin()">Login</a>\n\n				</ion-col>\n\n			</ion-row>\n\n		</ion-list>\n\n\n\n\n\n	</form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\streetX-moble-app\src\pages\signup\signup.html"*/
+            selector: 'page-user',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\signup\signup.html"*/'\n\n<ion-content>\n\n\n\n	<div  text-center style=" margin-top: 0 	px;">\n\n		<img src="assets/img/streetx-logo.png" alt="Ionic logo" class="brand-logo">\n\n	</div>\n\n	<ion-row class="logo" text-center>\n\n		 <ion-col col-12 style="    font-size: 2em;    margin-top: 0px;    color: #3896ea;"><ion-icon name="create" class="icon-chat-user"></ion-icon></ion-col>\n\n		 <ion-col col-12><h3 class="button-color" ><strong>Create Account</strong></h3></ion-col>\n\n	</ion-row>\n\n	<form #signupForm="ngForm" novalidate>\n\n		<ion-list no-lines class="form-input-fields">\n\n			<ion-row>\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.fullName" placeholder="Full name" name="fullName" type="text" #fullName="ngModel" required class="login-input">\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="fullName.valid || submitted == false" color="danger" padding-left>\n\n						fullName is required\n\n					</p>\n\n				</ion-col>\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.mobileNumber" placeholder="Enter mobile number" name="mobileNumber" number="number" #mobileNumber="ngModel" required class="login-input">\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="mobileNumber.valid || submitted == false" color="danger" padding-left>\n\n						mobileNumber is required\n\n					</p>\n\n				</ion-col>\n\n			</ion-row>\n\n			<ion-row>\n\n				<ion-col class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.email" placeholder="Enter emailid" name="email" type="email" #email="ngModel" required class="login-input" >\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>\n\n						email is required\n\n					</p>\n\n\n\n\n\n				</ion-col>\n\n			</ion-row>\n\n			<ion-row>\n\n\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.password" placeholder="Enter password" name="password" type="password" #password="ngModel" required class="login-input" >\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>\n\n						Password is required\n\n					</p>\n\n				</ion-col>\n\n				<ion-col col-6 class="padding0">\n\n					<ion-item class="padding0">\n\n						<ion-input [(ngModel)]="signup.confirmPassword" placeholder="Re-enter password" name="confirmPassword" type="password" #confirmPassword="ngModel" required class="login-input">\n\n						</ion-input>\n\n					</ion-item>\n\n					<p ion-text [hidden]="confirmPassword.valid || submitted == false" color="danger" padding-left>\n\n						confirmPassword password is required\n\n					</p>\n\n						</ion-col>\n\n			            </ion-row>\n\n					<!-- <ion-input [(ngModel)]="signup.spendingpassword" placeholder="Enter spending password" name="spendingpassword" type="password" #spendingpassword="ngModel" required class="login-input" >\n\n						</ion-input>\n\n						<p ion-text [hidden]="spendingpassword.valid || submitted == false" color="danger" padding-left>\n\n						Spending Password is required\n\n					</p>\n\n						\n\n						<ion-input [(ngModel)]="signup.confirmspendingpassword" placeholder="Enter  confirmspendingpassword" name="confirmspendingpassword" type="password" #confirmspendingpassword="ngModel" required class="login-input" >\n\n						</ion-input>\n\n			           <p ion-text [hidden]="confirmspendingpassword.valid || submitted == false" color="danger" padding-left>\n\n						confirmspendingpassword Password is required\n\n					</p>\n\n -->\n\n			<ion-row responsive-sm>\n\n				<ion-col >\n\n					<button class="button-backcolor"  ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>\n\n				</ion-col>\n\n			</ion-row>\n\n			<hr>\n\n			<ion-row>\n\n				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">\n\n					Already a member? <a class="button-color" (click)="onLogin()">Login</a>\n\n				</ion-col>\n\n			</ion-row>\n\n		</ion-list>\n\n\n\n\n\n	</form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\signup\signup.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
@@ -2585,6 +2413,184 @@ var SignupPage = (function () {
 }());
 
 //# sourceMappingURL=signup.js.map
+
+/***/ }),
+
+/***/ 64:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sails_io_js__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sails_io_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_sails_io_js__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the DashboardPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DashboardPage = (function () {
+    function DashboardPage(ngZone, toastCtrl, geolocation, navCtrl, platform, events, navParams, _setupService) {
+        this.ngZone = ngZone;
+        this.toastCtrl = toastCtrl;
+        this.geolocation = geolocation;
+        this.navCtrl = navCtrl;
+        this.platform = platform;
+        this.events = events;
+        this.navParams = navParams;
+        this._setupService = _setupService;
+        this.io = __WEBPACK_IMPORTED_MODULE_5_sails_io_js__(__WEBPACK_IMPORTED_MODULE_4_socket_io_client__); //375-384 sails.io.js in nodemodule 
+        this.submitted = false;
+        this.location = { email: '', lat: '', long: '' };
+        this.userEmail = { email: '' };
+        this.btcValue = { email: '', buyRate: '', currencyType: '', volume: '', sellRate: '' };
+        this.inrValue = { email: '', buyRate: '', currencyType: '', volume: '', sellRate: '' };
+        this.io.sails.url = "http://192.168.0.133:3000";
+        this.userdata();
+        this.getCurrencyPrice();
+        this.getCurrentPosition();
+        this.getTradersSetValue();
+    }
+    DashboardPage.prototype.userdata = function () {
+        this.user = JSON.parse(localStorage.getItem('logindetail'));
+        if (this.user != null || this.user != undefined) {
+            this.userEmail.email = this.user.trader.email;
+            this.events.publish("shareObject", this.userEmail.email);
+        }
+    };
+    DashboardPage.prototype.getCurrencyPrice = function () {
+        var _this = this;
+        this._setupService.getBuydata().subscribe(function (response) {
+            if (response.statusCode == 200) {
+                _this.cexdata = response.data.cex.bid;
+                _this.zebPayData = response.data.zeb.buy;
+            }
+        });
+    };
+    // get current position
+    DashboardPage.prototype.getCurrentPosition = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            var options = {
+                enableHighAccuracy: true,
+                maximumAge: 3600,
+                timeout: 10000
+            };
+            _this.geolocation.getCurrentPosition(options).then(function (response) {
+                _this.location.lat = response.coords.latitude;
+                _this.location.long = response.coords.longitude;
+                _this.location.email = _this.userEmail.email;
+                _this._setupService.sentLocation(_this.location).subscribe(function (response) {
+                });
+            }).catch(function (error) {
+            });
+        });
+    };
+    //get traders updated values 
+    DashboardPage.prototype.getTradersSetValue = function () {
+        var _this = this;
+        this._setupService.getTraderInfo(this.userEmail).subscribe(function (response) {
+            if (response.data != null) {
+                for (var i = 0; i < response.data.length; i++) {
+                    switch (response.data[i].currencyType) {
+                        case "INRW":
+                            _this.inrValue.buyRate = response.data[i].buyRate;
+                            _this.inrValue.sellRate = response.data[i].sellRate;
+                            _this.inrValue.volume = response.data[i].volume;
+                            break;
+                        case "BTC":
+                            _this.btcValue.buyRate = response.data[i].buyRate;
+                            _this.btcValue.sellRate = response.data[i].sellRate;
+                            _this.btcValue.volume = response.data[i].volume;
+                            break;
+                        default:
+                            // code...
+                            break;
+                    }
+                }
+            }
+        });
+    };
+    // update BTC values 
+    DashboardPage.prototype.updateBTC = function (form) {
+        this.btcValue.currencyType = "BTC";
+        this.btcValue.email = this.userEmail.email;
+        this.submitted = true;
+        var ngZ = this.ngZone;
+        var event = this.events;
+        if (form.valid) {
+            this.io.socket.post('/trader/buySellUpdate', this.btcValue, function (data, response) {
+                ngZ.run(function () {
+                    event.publish("ShareResponse", response);
+                });
+            });
+            this.listenToDataChangeEvents();
+        }
+    };
+    // update INR values 
+    DashboardPage.prototype.updateINR = function (form) {
+        this.inrValue.currencyType = "INRW";
+        this.inrValue.email = this.userEmail.email;
+        this.submitted = true;
+        var ngZ = this.ngZone;
+        var event = this.events;
+        if (form.valid) {
+            this.io.socket.post('/trader/buySellUpdate', this.inrValue, function (data, response) {
+                ngZ.run(function () {
+                    event.publish("ShareResponse", response);
+                });
+            });
+            this.listenToDataChangeEvents();
+        }
+    };
+    DashboardPage.prototype.listenToDataChangeEvents = function () {
+        var _this = this;
+        this.events.subscribe('ShareResponse', function (res) {
+            var toast = _this.toastCtrl.create({
+                message: res.body.message,
+                showCloseButton: true,
+                closeButtonText: 'Ok',
+                duration: 2000
+            });
+            toast.present();
+        });
+    };
+    DashboardPage.prototype.ionViewWillLeave = function () {
+        this.io.socket.disconnect();
+        delete this.io.sails;
+    };
+    DashboardPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-dashboard',template:/*ion-inline-start:"F:\Sails\StreetxTrader_App\src\pages\dashboard\dashboard.html"*/'<!--\n\n  Generated template for the DashboardPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Dashboard</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-item>\n\n  <ion-label>\n\n    <ion-row style="border:1px">  \n\n    <ion-col col-6>\n\n        <b><span class="text_Color">cex.io</span></b>\n\n    </ion-col>\n\n     <ion-col col-6>{{cexdata}}</ion-col>\n\n  </ion-row>\n\n  <ion-row>\n\n    <ion-col col-6><b><span class="text_Color">zebpay</span></b></ion-col>\n\n     <ion-col col-6>{{zebPayData}}</ion-col>\n\n  </ion-row>\n\n</ion-label>  \n\n</ion-item>\n\n\n\n   <ion-row class="logo" text-center>\n\n         <br>\n\n     <ion-col col-12><h3 class="text_Color" style="margin-top: 57px"><strong>Update</strong></h3></ion-col>\n\n  </ion-row>\n\n\n\n  <form #btcForm="ngForm" novalidate>\n\n    <ion-grid>\n\n      <ion-row> <h3 class="text_Color" style="margin-top: 5px"><strong>BTC</strong></h3></ion-row>\n\n          <ion-row no-lines class="form-input-fields">\n\n            <ion-col col-4>\n\n          <ion-input [(ngModel)]="btcValue.buyRate"  placeholder="buy" name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n         <ion-input [(ngModel)]="btcValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n            <ion-input [(ngModel)]="btcValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n         </ion-row>\n\n        <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateBTC(btcForm)" type="submit" block>update</button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <br><br>\n\n    </ion-grid>\n\n  </form>\n\n\n\n\n\n    <form #inrForm="ngForm" novalidate>\n\n          <ion-grid>\n\n         <ion-row> <ion-row> <h3 class="text_Color" style="margin-top: 5px"><strong>INRW</strong></h3></ion-row></ion-row>\n\n          <ion-row no-lines class="form-input-fields">\n\n            <ion-col col-4>\n\n          <ion-input [(ngModel)]="inrValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n         <ion-input [(ngModel)]="inrValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n            <ion-col col-4>\n\n            <ion-input [(ngModel)]="inrValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >\n\n        </ion-input>\n\n            </ion-col>\n\n         </ion-row>\n\n       <ion-row responsive-sm>\n\n        <ion-col >\n\n          <button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateINR(inrForm)" type="submit" block>update</button>\n\n        </ion-col>\n\n      </ion-row>\n\n      </ion-grid>\n\n    \n\n\n\n\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Sails\StreetxTrader_App\src\pages\dashboard\dashboard.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_setup_services__["a" /* SetupService */]])
+    ], DashboardPage);
+    return DashboardPage;
+}());
+
+//# sourceMappingURL=dashboard.js.map
 
 /***/ })
 

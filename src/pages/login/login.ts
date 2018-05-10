@@ -14,20 +14,12 @@ import { SetupService } from '../../providers/setup.services';
 })
 export class LoginPage {
   login: UserOptions = { username: '', password: '' };
- // loginDetail: LoginDetail = { email: '', password: '', lat:'', long:'' };
-  loginDetail: LoginDetail = { email: '', password: '',ip:'123344', lat:'', long:'' };
+  loginDetail: LoginDetail = { email: '', password: '',lat:'', long:'' };
   responseData:any;
   public user:any;
   submitted = false;
   public userName:any;
-constructor(public userData: UserData,
-  public navCtrl: NavController,
-  public toastCtrl: ToastController,
-  public events: Events,
-  public menuCtrl: MenuController,
-   public navParams: NavParams,
-   public _setupService: SetupService,
-   public loadingCtrl: LoadingController) {
+constructor(public userData: UserData,public navCtrl: NavController,public toastCtrl: ToastController,public events: Events,public menuCtrl: MenuController, public navParams: NavParams,public _setupService: SetupService,public loadingCtrl: LoadingController) {
 this.setCurrentPosition();
 
   }
@@ -44,18 +36,15 @@ onlogin1(form: NgForm){
   if (form.valid) {  
        this.userData.login(this.login.username);   
         let loading = this.loadingCtrl.create({
-       content: 'login please wait...'
+       content: 'Logging please wait...'
       }); 
         loading.present();
        this._setupService.createLoginDetail(this.loginDetail).subscribe((result) => { 
-         
           if(result.statusCode== 200){
-            this.responseData = result;   
-            // console.log(this.responseData.user.email);          
+            this.responseData = result;             
              localStorage.setItem('logindetail',JSON.stringify(this.responseData));
-              this.user=JSON.parse(localStorage.getItem('logindetail')); 
-             // alert("this.user = = "+this.user);
-              this.userName=this.responseData.user.email; 
+              this.user=JSON.parse(localStorage.getItem('logindetail'));   
+              this.userName=this.responseData.trader.email; 
               this.events.publish("shareObject", this.userName);         
              loading.dismiss();  
         this.navCtrl.setRoot(DashboardPage);

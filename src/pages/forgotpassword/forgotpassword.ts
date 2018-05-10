@@ -21,7 +21,7 @@ import { SetupService } from '../../providers/setup.services';
 export class ForgotpasswordPage {
 responseData:any;
  emailId: UserEmailId = { email: '' };
- otpvalue: Otpvalue = { userMailId: '', otp: '',};
+ otpvalue: Otpvalue = { traderMailId: '', otp: '',};
   submitted = false;
   constructor(public navCtrl: NavController,public toastCtrl: ToastController,public menuCtrl: MenuController, public navParams: NavParams,public alertCtrl: AlertController,public _setupService: SetupService,public loadingCtrl: LoadingController) {
   }
@@ -36,8 +36,8 @@ responseData:any;
   }
 
   forgotPassword(form: NgForm){
-  	this.submitted = true; 
-  	 if (form.valid) {  
+    this.submitted = true; 
+     if (form.valid) {  
      let loading = this.loadingCtrl.create({
        content: 'sending otp in your mailId...'
       });

@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, Platform,LoadingController,ToastController,AlertController } from 'ionic-angular';
-import { UserEmailId, PasswordValues,PasswordValues1  } from '../../interfaces/user-options';
-// import { DashboardPage } from '../dashboard/dashboard';
-import { SetupService } from '../../providers/setup.services';
-import { NgForm} from '@angular/forms';
-import { UserData } from '../../providers/user-data';
-
+import { NavController, LoadingController,ToastController,AlertController } from 'ionic-angular';
+import { UserEmailId } from '../../interfaces/user-options';
+import { DashboardPage } from '../dashboard/dashboard';
+import { SetupService } from '../../providers/setup.services'; 
 /**
  * Generated class for the SettingPage page.
  *
@@ -19,160 +16,175 @@ import { UserData } from '../../providers/user-data';
   templateUrl: 'setting.html',
 })
 export class SettingPage {
-   pet: string = "puppies";
-  isAndroid: boolean = false;
-  response:any;
-	public user:any;
-  public email:any;
-  public submitted = false;
-  public verifyEmail:boolean=false;
+  public user:any;
+  public verifyEmail:boolean=false;   
        userEmail: UserEmailId = { email: ''};
-       passwordValues: PasswordValues = {"userMailId": "","currentPassword": "","newPassword": "", "confirmNewPassword": "" };
-        passwordValues1: PasswordValues1 = {"userMailId": "","currentSpendingPassword": "","newSpendingPassword": "", "confirmNewPassword": "" };
-       constructor(public navCtrl: NavController,
-         public alertCtrl: AlertController,
-         public toastCtrl: ToastController,
-         public _setupService: SetupService,
-         public loadingCtrl: LoadingController,
-         public userData: UserData,
-         public platform: Platform,
-
-         )
+       passwordValue = {"userMailId": "","currentPassword": "","newPassword": "", "confirmNewPassword": "" };
+       otpvalues =     { "email": "",  "otp": "" };
+       constructor(public navCtrl: NavController,public alertCtrl: AlertController,public toastCtrl: ToastController,public _setupService: SetupService,public loadingCtrl: LoadingController) 
        {
-         this.isAndroid = platform.is('android');
-        var user =JSON.parse(localStorage.getItem('logindetail'));
-         this.email = user.user.email;
+          this.userdata();     
+          //this.verifyEmail=false;        
+       }
 
-    let backAction =  platform.registerBackButtonAction(() => {
-        this.navCtrl.pop();
-        backAction();
+       userdata(){      
+       this.user=JSON.parse(localStorage.getItem('logindetail'));
+       if(this.user!=null||this.user!=undefined){
+       this.userEmail.email=this.user.trader.email;
+       this.verifyEmail=this.user.trader.verifyEmail;
 
-      },)
+      }
+   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SettingPage');
   }
 
+  // change current password
 
-changeCurrentPassword(Form: NgForm){
-  this.passwordValues.userMailId=this.email;
-  if (Form.valid) {
-       this.userData.send(this.userEmail.email);
-       let loading = this.loadingCtrl.create({
-      content: 'update password...'
-      });
-       loading.present();
+  changeCurrentPassword(){
+       let prompt = this.alertCtrl.create({
+      title: 'Change Password',       
+      inputs: [
+        {          
+          name: 'currentPassword',
+          type: 'password',
+          placeholder: 'Current Password',         
+          
+        },
+         {          
+          name: 'newPassword',
+          type: 'password',
+          placeholder: 'New Password',         
+          
+        },
+         {          
+          name: 'confirmNewPassword',
+          type: 'password',
+          placeholder: 'Confirm New Password',         
+          
+        },
 
-
-     this._setupService.changecurrentpasswords(this.passwordValues).subscribe((result) => {
-
-         console.log(this.passwordValues);
-          if(result.statusCode== 200){
-            // this.responseData = result;
-           console.log("update password completed");
-           let toast = this.toastCtrl.create({
-                     message: 'update password successfully completed',
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {            
+                
+          }
+        },
+        {
+          text: 'submit',
+          handler: data => {
+            let loading = this.loadingCtrl.create({
+           content: 'updating current password...'
+        });
+            loading.present();
+            this.passwordValue.userMailId=this.userEmail.email;
+            this.passwordValue.currentPassword=data.currentPassword;
+            this.passwordValue.newPassword=data.newPassword;
+            this.passwordValue.confirmNewPassword=data.confirmNewPassword;
+                   
+            this._setupService.changecurrentpasswords(this.passwordValue).subscribe((response) => {
+              if(response.statusCode== 200){
+                 loading.dismiss();
+                  let toast = this.toastCtrl.create({
+                     message: 'Password change successfully',
                      showCloseButton: true,
                      closeButtonText: 'Ok',
                      duration: 5000
                 });
                 toast.present();
-           //      let prompt = this.alertCtrl.create({
-           //     message: 'update password successfully completed'
-           //
-           // });
-           loading.dismiss();
-           this.navCtrl.setRoot(SettingPage);
-
-           }
-
-
-           else{
-               // /this.responseData = result;
-               loading.dismiss();
-               let toast = this.toastCtrl.create({
-               message: this.response.message,
-               showCloseButton: true,
-               closeButtonText: 'Ok',
-               duration: 5000
-          });
-          toast.present();
-    }
-  });
-}
-}
-changespendingPassword(Form: NgForm){
-  this.passwordValues1.userMailId=this.email;
-  if (Form.valid) {
-       this.userData.send(this.userEmail.email);
-       let loading = this.loadingCtrl.create({
-      content: 'update password...'
-      });
-       loading.present();
-
-
-     this._setupService.changecurrentspepasswords(this.passwordValues1).subscribe((result) => {
-
-         console.log(this.passwordValues1);
-          if(result.statusCode== 200){
-            this.response = result;
-           console.log("update password completed");
-           let toast = this.toastCtrl.create({
-                     message: 'update password successfully completed',
+                     this.navCtrl.setRoot(DashboardPage);
+                 }    
+                 else{
+                     loading.dismiss();
+                     let toast = this.toastCtrl.create({
+                     message: response.message,
                      showCloseButton: true,
                      closeButtonText: 'Ok',
                      duration: 5000
                 });
                 toast.present();
-           //      let prompt = this.alertCtrl.create({
-           //     message: 'update password successfully completed'
-           //
-           // });
-           loading.dismiss();
-           this.navCtrl.setRoot(SettingPage);
+                 }         
+             } );        
+          }
+        }
+      ],
+      enableBackdropDismiss: false
+    });
+    prompt.present(); 
+  }
 
-           }
-
-
-           else{
-               this.response = result;
-               loading.dismiss();
-               let toast = this.toastCtrl.create({
-               message: this.response.message,
-               showCloseButton: true,
-               closeButtonText: 'Ok',
-               duration: 5000
-          });
-          toast.present();
-    }
-  });
+// veryfy email id
+  veryfyEmail(){
+    let loading = this.loadingCtrl.create({
+           content: 'sending otp in your emailId..'
+        });
+    loading.present();
+    this._setupService.EmailVerifyforAccount(this.userEmail).subscribe((response)=>{
+      loading.dismiss();
+      let prompt = this.alertCtrl.create({
+      title: 'Enter One Time Password',       
+      inputs: [
+        {          
+          name: 'otp',
+          type: 'password',
+          placeholder: 'One Time Password',  
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {           
+                
+          }
+        },
+        {
+          text: 'submit',
+          handler: data => {
+            let loading = this.loadingCtrl.create({
+           content: 'verifying OtP...'
+        });
+            loading.present();
+            this.otpvalues.email= this.userEmail.email
+            this.otpvalues.otp=data.otp;                                
+            this._setupService.VerificationEmail(this.otpvalues).subscribe((response) => {
+              console.log("RES = = "+JSON.stringify(response));
+               if(response.statusCode== 200){                
+                 loading.dismiss();
+                 localStorage.setItem('logindetail',JSON.stringify(response));
+                 this.user=JSON.parse(localStorage.getItem('logindetail'));
+                 console.log("this.user.trader.email"+response.trader.email);
+                   console.log("this.user.trader.verifyEmail"+response.trader.verifyEmail);
+                 this.userEmail.email=this.user.trader.email;
+                 this.verifyEmail=this.user.trader.verifyEmail;
+                 let toast = this.toastCtrl.create({
+                     message: 'verify email successfully !!',
+                     showCloseButton: true,
+                     closeButtonText: 'Ok',
+                     duration: 5000
+                });
+                toast.present();
+                 this.navCtrl.setRoot(DashboardPage);
+                }    
+                 else{
+                   loading.dismiss();
+                     let toast = this.toastCtrl.create({
+                     message: response.message,
+                     showCloseButton: true,
+                     closeButtonText: 'Ok',
+                     duration: 5000
+                });
+                toast.present();                  
+                 }         
+             } );        
+          }
+        }
+      ],
+      enableBackdropDismiss: false
+    });
+    prompt.present(); 
+    });
+  }
 }
-}
-}
-
-
-
-
-
-
-//  changespendingPassword(Form: NgForm){
-//   this.passwordValues.userMailId=this.email;
-//   this.submitted = true;
-//   if (Form.valid) {
-//        this.userData.send(this.userEmail.email);
-//
-//
-//
-//      this._setupService.changecurrentspendingpasswords(this.passwordValues1).subscribe((result) => {
-//
-//          console.log(this.passwordValues1);
-//           if(result.statusCode== 200){
-//
-//               // localStorage.setItem('senddetails',JSON.stringify(this.responseData));
-//               // this.user=JSON.parse(localStorage.getItem('senddetails'));
-//
-//
-//       }
-//     });
-//     }
-// }
-//
-// }

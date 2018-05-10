@@ -17,7 +17,7 @@ export class TutorialPage {
 
 	@ViewChild('slides') slides: Slides;
    login1: UserOptions = { username: '', password: '' };
-   loginDetail: LoginDetail = { email: '', password: '',ip:'123344', lat:'', long:'' };
+   loginDetail: LoginDetail = { email: '', password: '', lat:'', long:'' };
   responseData:any;
   public user:any;
   submitted = false;
